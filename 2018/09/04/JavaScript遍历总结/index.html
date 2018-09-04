@@ -6,18 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://zhengyuliang.github.io">
-  <title>Archives: 2018/8 | zhengyuliang</title>
+  <title>JavaScript遍历总结 | zhengyuliang</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前端开发工程师">
-<meta property="og:type" content="website">
-<meta property="og:title" content="zhengyuliang">
-<meta property="og:url" content="https://zhengyuliang.github.io/archives/2018/08/index.html">
+  <meta name="description" content="总结一下JS常用的遍历方法123// array  objectconst arr = [1, 2, 3, 4, 5]const obj = &amp;#123;a:1, b:2, c:3&amp;#125; for 循环123for (let index = 0; index &amp;lt; arr.length; index++) &amp;#123;  const element = arr[index]; // 1,">
+<meta name="keywords" content="javascript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript遍历总结">
+<meta property="og:url" content="https://zhengyuliang.github.io/2018/09/04/JavaScript遍历总结/index.html">
 <meta property="og:site_name" content="zhengyuliang">
-<meta property="og:description" content="前端开发工程师">
+<meta property="og:description" content="总结一下JS常用的遍历方法123// array  objectconst arr = [1, 2, 3, 4, 5]const obj = &amp;#123;a:1, b:2, c:3&amp;#125; for 循环123for (let index = 0; index &amp;lt; arr.length; index++) &amp;#123;  const element = arr[index]; // 1,">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-09-04T02:47:04.443Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="zhengyuliang">
-<meta name="twitter:description" content="前端开发工程师">
+<meta name="twitter:title" content="JavaScript遍历总结">
+<meta name="twitter:description" content="总结一下JS常用的遍历方法123// array  objectconst arr = [1, 2, 3, 4, 5]const obj = &amp;#123;a:1, b:2, c:3&amp;#125; for 循环123for (let index = 0; index &amp;lt; arr.length; index++) &amp;#123;  const element = arr[index]; // 1,">
   
     <link rel="alternative" href="/atom.xml" title="zhengyuliang" type="application/atom+xml">
   
@@ -141,95 +143,203 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-JavaScript遍历总结" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/31/SCSS-详解/" class="archive-article-date">
-  	<time datetime="2018-08-31T06:40:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-31</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/31/SCSS-详解/">SCSS --详解</a>
+    <h1 class="article-title" itemprop="name">
+      JavaScript遍历总结
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2018/09/04/JavaScript遍历总结/" class="archive-article-date">
+  	<time datetime="2018-09-04T02:25:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="总结一下JS常用的遍历方法"><a href="#总结一下JS常用的遍历方法" class="headerlink" title="总结一下JS常用的遍历方法"></a>总结一下JS常用的遍历方法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">// array  object</span><br><span class="line">const arr = [1, 2, 3, 4, 5]</span><br><span class="line">const obj = &#123;a:1, b:2, c:3&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="for-循环"><a href="#for-循环" class="headerlink" title="for 循环"></a>for 循环</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">for (let index = 0; index &lt; arr.length; index++) &#123;</span><br><span class="line">  const element = arr[index]; // 1, 2, 3, 4, 5</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h3 id="forEach"><a href="#forEach" class="headerlink" title="forEach"></a>forEach</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">for (let index = 0; index &lt; arr.length; index++) &#123;</span><br><span class="line">  const element = arr[index]; // 1, 2, 3, 4, 5</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="map"><a href="#map" class="headerlink" title="map"></a>map</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">arr.map((item, index) =&gt; &#123;</span><br><span class="line">  console.log(item, index) // 1,0  2,1  3,2  4,3  5,4</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="filter-过滤-返回一个符合条件的数组"><a href="#filter-过滤-返回一个符合条件的数组" class="headerlink" title="filter 过滤 返回一个符合条件的数组"></a>filter 过滤 返回一个符合条件的数组</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">const newArr = arr.filter((item, index) =&gt; &#123;</span><br><span class="line">  console.log(item, index) // 1,0  2,1  3,2  4,3  5,4</span><br><span class="line">  return item &gt; 2</span><br><span class="line">&#125;)</span><br><span class="line">console.log(newArr)  // 3, 4, 5</span><br></pre></td></tr></table></figure>
+<h3 id="some-返回一个布尔值"><a href="#some-返回一个布尔值" class="headerlink" title="some 返回一个布尔值"></a>some 返回一个布尔值</h3><p>某一个值满足条件返回true<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const result = arr.some((item, index) =&gt; &#123;</span><br><span class="line">  return item &gt; 3</span><br><span class="line">&#125;)</span><br><span class="line">console.log(result) // true</span><br></pre></td></tr></table></figure></p>
+<h3 id="every-返回一个布尔值"><a href="#every-返回一个布尔值" class="headerlink" title="every 返回一个布尔值"></a>every 返回一个布尔值</h3><p>所有值满足条件返回true<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const result2 = arr.every((item, index) =&gt; &#123;</span><br><span class="line">  return item &gt; 2</span><br><span class="line">&#125;)</span><br><span class="line">console.log(result2) // false</span><br></pre></td></tr></table></figure></p>
+<h3 id="reduce-array-reduce-callback-initialValue"><a href="#reduce-array-reduce-callback-initialValue" class="headerlink" title="reduce array.reduce(callback[, initialValue]);"></a>reduce array.reduce(callback[, initialValue]);</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">// 求和</span><br><span class="line">var sum = arr.reduce(function(x, y) &#123;</span><br><span class="line">  return x + y</span><br><span class="line">&#125;, 0)</span><br><span class="line">console.log(sum)  //  15 </span><br><span class="line"></span><br><span class="line">// 取最大值</span><br><span class="line">var max = arr.reduce(function(x, y) &#123;</span><br><span class="line">  return x &gt; y ? x : y;</span><br><span class="line">&#125;)</span><br><span class="line">console.log(max) // 5</span><br></pre></td></tr></table></figure>
+<h3 id="for…in-与-for…of-使用与区别"><a href="#for…in-与-for…of-使用与区别" class="headerlink" title="for…in 与 for…of 使用与区别"></a>for…in 与 for…of 使用与区别</h3><ul>
+<li><p>for…in es5标准 遍历key值 并且会遍历数组所有的可枚举属性 遍历顺序有可能不是按照实际数组的内部顺序 所以for in更适合遍历对象，不要使用for in遍历数组</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">for (index in arr) &#123;</span><br><span class="line">  console.log(index) // 0 1 2 3 4</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">for (index in obj) &#123;</span><br><span class="line">  console.log(index) // a b c</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>for…of 是es6标准 遍历的是value值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">for (item of arr) &#123;</span><br><span class="line">  console.log(item) // 0 1 2 3 4</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="ES6-对象的扩展-Object-keys-，Object-values-，Object-entries"><a href="#ES6-对象的扩展-Object-keys-，Object-values-，Object-entries" class="headerlink" title="ES6-对象的扩展-Object.keys()，Object.values()，Object.entries()"></a>ES6-对象的扩展-Object.keys()，Object.values()，Object.entries()</h3><ul>
+<li><p>Object.keys() ES5 引入了 Object.keys 方法，返回一个数组，成员是参数对象自身的（不含继承的）所有可遍历（enumerable）属性的键名。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Object.keys(obj) // [a, b, c]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Object.values 方法返回一个数组，成员是参数对象自身的（不含继承的）所有可遍历（enumerable）属性的键值。 返回数组的成员顺序是按照key值的大小顺序排列(升序)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Object.values(obj)  // [1, 2, 3]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Object.entries 返回一个数组，成员是参数对象自身的（不含继承的）所有可遍历（enumerable）属性的键值对数组。如果原对象的属性名是一个 Symbol 值，该属性会被忽略。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Object.entries(obj)  // [[&apos;a&apos;: 1],[&apos;b&apos;: 2], [&apos;c&apos;: 3]]</span><br></pre></td></tr></table></figure></li>
+</ul>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢您的支持<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/money/alipay-min.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/money/weixin-min.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">SCSS</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">CSS预处理器语言</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://zhengyuliang.github.io/2018/09/04/JavaScript遍历总结/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/22/hello-world/" class="archive-article-date">
-  	<time datetime="2018-08-22T03:40:14.985Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-22</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/08/31/SCSS-详解/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">SCSS --详解</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/22/hello-world/">Hello World</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -259,8 +369,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
