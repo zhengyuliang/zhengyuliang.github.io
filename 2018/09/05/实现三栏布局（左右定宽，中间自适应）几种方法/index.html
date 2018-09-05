@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://zhengyuliang.github.io">
-  <title>相册 | zhengyuliang</title>
+  <title>实现三栏布局（左右定宽，中间自适应）几种方法 | zhengyuliang</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Photos 	   	图片正在加载中…     (function() {     var loadScript = function(path) {       var $script = document.createElement(&apos;script&apos;)       document.getElementsByTagName(&apos;body&apos;)[0].appendChild($script)">
-<meta property="og:type" content="website">
-<meta property="og:title" content="相册">
-<meta property="og:url" content="https://zhengyuliang.github.io/photos/index.html">
+  <meta name="description" content="实现三栏布局，左右定宽中间自适应。（四种方式） 1、flex: 目前常用方法，可以自适调节页面宽高等； display: flex。flex:参数判断子对象多少宽度123456789101112131415161718192021222324252627282930&amp;lt;head&amp;gt;    &amp;lt;style&amp;gt;        .wrap &amp;#123;            displa">
+<meta name="keywords" content="CSS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="实现三栏布局（左右定宽，中间自适应）几种方法">
+<meta property="og:url" content="https://zhengyuliang.github.io/2018/09/05/实现三栏布局（左右定宽，中间自适应）几种方法/index.html">
 <meta property="og:site_name" content="zhengyuliang">
-<meta property="og:description" content="Photos 	   	图片正在加载中…     (function() {     var loadScript = function(path) {       var $script = document.createElement(&apos;script&apos;)       document.getElementsByTagName(&apos;body&apos;)[0].appendChild($script)">
+<meta property="og:description" content="实现三栏布局，左右定宽中间自适应。（四种方式） 1、flex: 目前常用方法，可以自适调节页面宽高等； display: flex。flex:参数判断子对象多少宽度123456789101112131415161718192021222324252627282930&amp;lt;head&amp;gt;    &amp;lt;style&amp;gt;        .wrap &amp;#123;            displa">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-09-03T08:34:59.213Z">
+<meta property="og:updated_time" content="2018-09-05T03:22:43.108Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="相册">
-<meta name="twitter:description" content="Photos 	   	图片正在加载中…     (function() {     var loadScript = function(path) {       var $script = document.createElement(&apos;script&apos;)       document.getElementsByTagName(&apos;body&apos;)[0].appendChild($script)">
+<meta name="twitter:title" content="实现三栏布局（左右定宽，中间自适应）几种方法">
+<meta name="twitter:description" content="实现三栏布局，左右定宽中间自适应。（四种方式） 1、flex: 目前常用方法，可以自适调节页面宽高等； display: flex。flex:参数判断子对象多少宽度123456789101112131415161718192021222324252627282930&amp;lt;head&amp;gt;    &amp;lt;style&amp;gt;        .wrap &amp;#123;            displa">
   
     <link rel="alternative" href="/atom.xml" title="zhengyuliang" type="application/atom+xml">
   
@@ -142,42 +143,56 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-photos" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="css3-实现三栏布局（左右定宽，中间自适应）几种方法" class="article article-type-css3 " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      相册
+      实现三栏布局（左右定宽，中间自适应）几种方法
     </h1>
   
 
+        
+        <a href="/2018/09/05/实现三栏布局（左右定宽，中间自适应）几种方法/" class="archive-article-date">
+  	<time datetime="2018-09-05T02:44:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-05</time>
+</a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <link rel="stylesheet" href="./ins.css">
-<div class="photos-btn-wrap">
-	<a class="photos-btn active" href="javascript:void(0)" target="_blank" rel="noopener">Photos</a>
-	<!--<a class="photos-btn" href="#">待续</a>-->
-</div>
-<div class="instagram itemscope">
-	<a href="javascript:void(0)" target="_blank" class="open-ins">图片正在加载中…</a>
-</div>
-<script>
-  (function() {
-    var loadScript = function(path) {
-      var $script = document.createElement('script')
-      document.getElementsByTagName('body')[0].appendChild($script)
-      $script.setAttribute('src', path)
-    }
-    setTimeout(function() {
-      loadScript('./ins.js')
-    }, 0)
-  })()
-</script>
+        <p>实现三栏布局，左右定宽中间自适应。（四种方式）</p>
+<h3 id="1、flex-目前常用方法，可以自适调节页面宽高等；"><a href="#1、flex-目前常用方法，可以自适调节页面宽高等；" class="headerlink" title="1、flex: 目前常用方法，可以自适调节页面宽高等；"></a>1、flex: 目前常用方法，可以自适调节页面宽高等；</h3><blockquote>
+<p>display: flex。flex:参数判断子对象多少宽度<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;style&gt;</span><br><span class="line">        .wrap &#123;</span><br><span class="line">            display: flex;</span><br><span class="line">            background-color: yellowgreen;</span><br><span class="line">        &#125;</span><br><span class="line">        .t1 &#123;</span><br><span class="line">            width: 200px;</span><br><span class="line">            height: 100px;</span><br><span class="line">            background-color: red;</span><br><span class="line">        &#125;</span><br><span class="line">        .t2 &#123;</span><br><span class="line">            flex: 1;</span><br><span class="line">            height: 100px;</span><br><span class="line">            background-color: blue;</span><br><span class="line">        &#125;</span><br><span class="line">        .t3 &#123;</span><br><span class="line">            width: 200px;</span><br><span class="line">            height: 100px;</span><br><span class="line">            background-color: hotpink;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;/style&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div class=&quot;wrap&quot;&gt;</span><br><span class="line">        &lt;div class=&quot;t1&quot;&gt;left&lt;/div&gt;</span><br><span class="line">        &lt;div class=&quot;t2&quot;&gt;center&lt;/div&gt;</span><br><span class="line">        &lt;div class=&quot;t3&quot;&gt;right&lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<a id="more"></a>
+<h3 id="2、grid"><a href="#2、grid" class="headerlink" title="2、grid:"></a>2、grid:</h3><ul>
+<li>grid布局，就像flex的升级版，布局上十分强大。相对flex而言写起来简单的多</li>
+<li>主要属性：<ul>
+<li>grid-template-columns：//竖向排列</li>
+<li>grid-template-rows：//横向排列<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;title&gt;Title&lt;/title&gt;</span><br><span class="line">    &lt;style&gt;</span><br><span class="line">        .wrap &#123;</span><br><span class="line">            display: grid;</span><br><span class="line">            grid-template-columns: 200px 1fr 200px;</span><br><span class="line">        &#125;</span><br><span class="line">        .wrap&gt;div &#123;</span><br><span class="line">            height: 200px;</span><br><span class="line">        &#125;</span><br><span class="line">        .t1 &#123;</span><br><span class="line">            background-color: aqua;</span><br><span class="line">        &#125;</span><br><span class="line">        .t2 &#123;</span><br><span class="line">            background-color: hotpink;</span><br><span class="line">        &#125;</span><br><span class="line">        .t3 &#123;</span><br><span class="line">            background-color: yellowgreen;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;/style&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div class=&quot;wrap&quot;&gt;</span><br><span class="line">        &lt;div class=&quot;t1&quot;&gt;left&lt;/div&gt;</span><br><span class="line">        &lt;div class=&quot;t2&quot;&gt;center&lt;/div&gt;</span><br><span class="line">        &lt;div class=&quot;t3&quot;&gt;right&lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="3、-position-定位"><a href="#3、-position-定位" class="headerlink" title="3、 position: 定位"></a>3、 position: 定位</h3><blockquote>
+<p>主要使用了position中的absolute 绝对定位及relative 相对定位</p>
+<ul>
+<li>absolute ：绝对定位，如果一个元素绝对定位后，其参照物是以离自身最近元素是否设置了相对定位，如果有设置将以离自己最近元素定位，如果没有将往其祖先元素寻找相对定位元素，一直找到html为止。<br>元素的位置通过 “left”, “top”, “right” 以及 “bottom” 属性进行规定。</li>
+<li>relative 相对定位，相对于自身原本位置进行定位。因此，”left:20” 会向元素的 LEFT 位置添加 20 像素。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;style&gt;</span><br><span class="line">        .wrap &#123;</span><br><span class="line">            background-color: aqua;</span><br><span class="line">            padding: 20px;</span><br><span class="line">            position: relative;</span><br><span class="line">        &#125;</span><br><span class="line">        .t1 &#123;</span><br><span class="line">            position: absolute;</span><br><span class="line">            left: 0;</span><br><span class="line">            top: 0;</span><br><span class="line">            width: 200px;</span><br><span class="line">            height: 100px;</span><br><span class="line">            background-color: blue;</span><br><span class="line">        &#125;</span><br><span class="line">        .t2 &#123;</span><br><span class="line">            height: 100px;</span><br><span class="line">            background-color: brown;</span><br><span class="line">            margin: 0 220px;</span><br><span class="line">        &#125;</span><br><span class="line">        .t3 &#123;</span><br><span class="line">            position: absolute;</span><br><span class="line">            right: 0;</span><br><span class="line">            top: 0;</span><br><span class="line">            width: 200px;</span><br><span class="line">            height: 100px;</span><br><span class="line">            background-color: black;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;/style&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div class=&quot;wrap&quot;&gt;</span><br><span class="line">        &lt;div class=&quot;t1&quot;&gt;left&lt;/div&gt;</span><br><span class="line">        &lt;div class=&quot;t2&quot;&gt;center&lt;/div&gt;</span><br><span class="line">        &lt;div class=&quot;t3&quot;&gt;right&lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>注：此布局在单页面及后台系统用的比较多，主要适用于PC端，不建议用于移动端布局</p>
+</blockquote>
+<h3 id="4、float-老方法，不详解，主要注意clear清除浮动"><a href="#4、float-老方法，不详解，主要注意clear清除浮动" class="headerlink" title="4、float: 老方法，不详解，主要注意clear清除浮动"></a>4、float: 老方法，不详解，主要注意clear清除浮动</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;style&gt;</span><br><span class="line">        .wrap &#123;</span><br><span class="line">            background-color: aqua;</span><br><span class="line">            overflow: hidden;</span><br><span class="line">            padding: 20px;</span><br><span class="line">        &#125;</span><br><span class="line">        .d1 &#123;</span><br><span class="line">            width: 200px;</span><br><span class="line">            height: 100px;</span><br><span class="line">            float: left;</span><br><span class="line">            background-color: brown;</span><br><span class="line">        &#125;</span><br><span class="line">        .d2 &#123;</span><br><span class="line">            width: 200px;</span><br><span class="line">            height: 100px;</span><br><span class="line">            float: right;</span><br><span class="line">            background-color: blueviolet;</span><br><span class="line">        &#125;</span><br><span class="line">        .d3 &#123;</span><br><span class="line">            height: 100px;</span><br><span class="line">            background-color: blue;</span><br><span class="line">            margin-left: 200px;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;/style&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div class=&quot;wrap&quot;&gt;</span><br><span class="line">        &lt;div class=&quot;d1&quot;&gt;left&lt;/div&gt;</span><br><span class="line">        &lt;div class=&quot;d2&quot;&gt;right&lt;/div&gt;</span><br><span class="line">        &lt;div class=&quot;d3&quot;&gt;center&lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注：几种方法，目前比较常用flex,grid用的较少，另外两种目前基本上不用，都是以前html5之前的写法。以后应该会多用grid。下次我会整理一版有关grid布局的教程。</p>
+</blockquote>
+<p><em>文章通过网络汇总整理所得，如需转载，请标注，谢谢</em></p>
 
       
 
@@ -217,6 +232,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -228,6 +254,16 @@
 </article>
 
   
+<nav id="article-nav">
+  
+  
+    <a href="/2018/09/04/JavaScript遍历总结/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JavaScript遍历总结</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -246,6 +282,16 @@
 </aside>
 
 
+
+  
+  
+  
+
+  
+
+  
+
+  
 
 
           </div>
@@ -275,7 +321,7 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
