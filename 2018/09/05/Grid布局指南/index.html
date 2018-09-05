@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://zhengyuliang.github.io">
-  <title>相册 | zhengyuliang</title>
+  <title>Grid布局指南 | zhengyuliang</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Photos 	   	图片正在加载中…     (function() {     var loadScript = function(path) {       var $script = document.createElement(&apos;script&apos;)       document.getElementsByTagName(&apos;body&apos;)[0].appendChild($script)">
-<meta property="og:type" content="website">
-<meta property="og:title" content="相册">
-<meta property="og:url" content="https://zhengyuliang.github.io/photos/index.html">
+  <meta name="description" content="简介CSS网格布局（又称“网格”），是一种二维网格布局系统。CSS在处理网页布局方面一直做的不是很好。一开始我们用的是table（表格）布局，然后用float(浮动)，position（定位）和inline-block（行内块）布局，但是这些方法本质上是hack，遗漏了很多功能，例如垂直居中。后来出了flexbox(盒子布局)，解决了很多布局问题，但是它仅仅是一维布局，而不是复杂的二维布局，实际上">
+<meta name="keywords" content="css">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Grid布局指南">
+<meta property="og:url" content="https://zhengyuliang.github.io/2018/09/05/Grid布局指南/index.html">
 <meta property="og:site_name" content="zhengyuliang">
-<meta property="og:description" content="Photos 	   	图片正在加载中…     (function() {     var loadScript = function(path) {       var $script = document.createElement(&apos;script&apos;)       document.getElementsByTagName(&apos;body&apos;)[0].appendChild($script)">
+<meta property="og:description" content="简介CSS网格布局（又称“网格”），是一种二维网格布局系统。CSS在处理网页布局方面一直做的不是很好。一开始我们用的是table（表格）布局，然后用float(浮动)，position（定位）和inline-block（行内块）布局，但是这些方法本质上是hack，遗漏了很多功能，例如垂直居中。后来出了flexbox(盒子布局)，解决了很多布局问题，但是它仅仅是一维布局，而不是复杂的二维布局，实际上">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-09-03T08:34:59.213Z">
+<meta property="og:updated_time" content="2018-09-05T09:19:29.949Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="相册">
-<meta name="twitter:description" content="Photos 	   	图片正在加载中…     (function() {     var loadScript = function(path) {       var $script = document.createElement(&apos;script&apos;)       document.getElementsByTagName(&apos;body&apos;)[0].appendChild($script)">
+<meta name="twitter:title" content="Grid布局指南">
+<meta name="twitter:description" content="简介CSS网格布局（又称“网格”），是一种二维网格布局系统。CSS在处理网页布局方面一直做的不是很好。一开始我们用的是table（表格）布局，然后用float(浮动)，position（定位）和inline-block（行内块）布局，但是这些方法本质上是hack，遗漏了很多功能，例如垂直居中。后来出了flexbox(盒子布局)，解决了很多布局问题，但是它仅仅是一维布局，而不是复杂的二维布局，实际上">
   
     <link rel="alternative" href="/atom.xml" title="zhengyuliang" type="application/atom+xml">
   
@@ -142,42 +143,63 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-photos" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Grid布局指南" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      相册
+      Grid布局指南
     </h1>
   
 
+        
+        <a href="/2018/09/05/Grid布局指南/" class="archive-article-date">
+  	<time datetime="2018-09-05T05:48:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-05</time>
+</a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <link rel="stylesheet" href="./ins.css">
-<div class="photos-btn-wrap">
-	<a class="photos-btn active" href="javascript:void(0)" target="_blank" rel="noopener">Photos</a>
-	<!--<a class="photos-btn" href="#">待续</a>-->
-</div>
-<div class="instagram itemscope">
-	<a href="javascript:void(0)" target="_blank" class="open-ins">图片正在加载中…</a>
-</div>
-<script>
-  (function() {
-    var loadScript = function(path) {
-      var $script = document.createElement('script')
-      document.getElementsByTagName('body')[0].appendChild($script)
-      $script.setAttribute('src', path)
-    }
-    setTimeout(function() {
-      loadScript('./ins.js')
-    }, 0)
-  })()
-</script>
+        <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>CSS网格布局（又称“网格”），是一种二维网格布局系统。CSS在处理网页布局方面一直做的不是很好。<br>一开始我们用的是<strong>table</strong>（表格）布局，然后用<strong>float</strong>(浮动)，<strong>position</strong>（定位）和<strong>inline-block</strong>（行内块）布局，但是这些方法本质上是hack，遗漏了很多功能，例如垂直居中。<br>后来出了<strong>flexbox</strong>(盒子布局)，解决了很多布局问题，但是它仅仅是一维布局，而不是复杂的二维布局，实际上它们（flexbox与grid）能很好的配合使用。<br>Grid布局是第一个专门为解决布局问题而创建的CSS模块,2012年11月06日成立草案。<br><a id="more"></a></p>
+<h2 id="初步了解和浏览器支持"><a href="#初步了解和浏览器支持" class="headerlink" title="初步了解和浏览器支持"></a>初步了解和浏览器支持</h2><p>使用Grid布局非常简单，你只需要给容器（<strong>container</strong>）定义：<strong>display:grid</strong>，并设置列（<strong>grid-template-columns</strong>）和 行（<strong>grid-template-rows</strong>）的大小，然后用<strong>grid-column</strong>和<strong>grid-row</strong>定义容器子元素（grid-item项目）的位置。<br>与flexbox布局类似，一开始项目的排列顺序并不重要，可以放置在容器的任何位置，这也使得你非常容易通过媒体查询重新排列你的项目。想象一下，当你定义整个页面的布局时，你只需要几行CSS就可以完成页面重排以便适应各种屏幕宽度，这得有多么神奇！</p>
+<ul>
+<li>目前浏览器还不支持Grid布局，IE10和IE11支持老的语法。   </li>
+<li>如果你想体验Grid布局的强大，推荐使用开通过“体验新功能”的Chrome, Opera 或 Firefox， Chrome:打开浏览器，输入<code>chrome://flags</code>，找到”<code>experimental web platform features</code>“，启用并重启浏览器；Opera：输入<code>opera://flags</code>，与Chrome一样；Firefox:输入layout.css.grid.enabled。</li>
+</ul>
+<p><strong><em>浏览器支持情况：</em></strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Chrome</th>
+<th style="text-align:center">Safari</th>
+<th style="text-align:center">Firefox</th>
+<th style="text-align:center">Opera</th>
+<th style="text-align:center">IE</th>
+<th>Android/iOS  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">29+ (Behind flag)</td>
+<td style="text-align:center">Not supported</td>
+<td style="text-align:center">40+ (Behind flag)</td>
+<td style="text-align:center">28+ (Behind flag)</td>
+<td style="text-align:center">10+ (Old syntax)</td>
+<td>Not supported  </td>
+</tr>
+</tbody>
+</table>
+<h2 id="重要术语"><a href="#重要术语" class="headerlink" title="重要术语"></a>重要术语</h2><ul>
+<li>在深入了解Grid布局概念之前，我们先了解一些术语。因为这些术语在概念上很相似，如果你不记住Grid定义的含义，会很容易将它们混淆，但是不用担心，这里术语很少。</li>
+</ul>
+<h3 id="网格容器（Grid-Container）"><a href="#网格容器（Grid-Container）" class="headerlink" title="网格容器（Grid Container）"></a>网格容器（Grid Container）</h3><p>当一个元素的属性设置为display：grid时， 它是所有网格项（Grid Items）的直接父元素。 在下面示例中container就是网格容器。<br><strong>HTML:</strong><br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item item-1"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item item-2"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item item-3"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="网格项（Grid-Item）"><a href="#网格项（Grid-Item）" class="headerlink" title="网格项（Grid Item）"></a>网格项（Grid Item）</h3><p>网格容器的子节点(例如直接后代)。这里 item元素都是网格项，但是<code>sub-item</code>不包含其中。<br><strong>HTML:</strong><br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span> </span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"sub-item"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>末完，待续…</p>
+</blockquote>
 
       
 
@@ -217,6 +239,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -228,6 +261,16 @@
 </article>
 
   
+<nav id="article-nav">
+  
+  
+    <a href="/2018/09/05/实现三栏布局（左右定宽，中间自适应）几种方法/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">实现三栏布局（左右定宽，中间自适应）几种方法</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -246,6 +289,16 @@
 </aside>
 
 
+
+  
+  
+  
+
+  
+
+  
+
+  
 
 
           </div>
@@ -273,7 +326,7 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
