@@ -167,17 +167,8 @@
 <p>我使用的操作系统版本是Ubuntu 16.04。<br>但是装完gitbook之后会出现下面的错误：</p>
 </blockquote>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">flow@flow-P7xxTM:~/os/testGitBook$ gitbook init</span><br><span class="line">Error loading version latest: /home/flow/.gitbook/versions/3.2.3/node_modules/immutable/dist/immutable.js:4409</span><br><span class="line">&#125;);</span><br><span class="line">^</span><br><span class="line"></span><br><span class="line">SyntaxError: Unexpected token &#125;</span><br><span class="line">    at new Script (vm.js:83:7)</span><br><span class="line">    at createScript (vm.js:267:10)</span><br><span class="line">    at Object.runInThisContext (vm.js:319:10)</span><br><span class="line">    at Module._compile (internal/modules/cjs/loader.js:685:28)</span><br><span class="line">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:733:10)</span><br><span class="line">    at Module.load (internal/modules/cjs/loader.js:620:32)</span><br><span class="line">    at tryModuleLoad (internal/modules/cjs/loader.js:560:12)</span><br><span class="line">    at Function.Module._load (internal/modules/cjs/loader.js:552:3)</span><br><span class="line">    at Module.require (internal/modules/cjs/loader.js:658:17)</span><br><span class="line">    at require (internal/modules/cjs/helpers.js:22:18)</span><br><span class="line"></span><br><span class="line">TypeError: Cannot read property 'commands' of null</span><br></pre></td></tr></table></figure>
-<p>百度了好长时间，一直都没有找到有效的解决方法。<br>接下来尝试着为gitbook降低版本，那么在降版本之前需要把gitbook删除掉，需要执行下面的命令：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo npm uninstall -g gitbook</span><br></pre></td></tr></table></figure>
-<p>接下来安装2.3.0版本试试看</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo npm install -g gitbook-cli@2.3.0</span><br></pre></td></tr></table></figure>
-<p>然后进入到目录：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd ~/.gitbook/versions/3.2.3/</span><br><span class="line">sudo npm i</span><br></pre></td></tr></table></figure></p>
-<p>接下来执行：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gitbook init</span><br></pre></td></tr></table></figure>
-<p>我们可以看到SUMMARY.md和README.md能够被正常创建，但是如果切回到/home中的其他目录，还是会出现错误。</p>
-<p>接下来的问题我发现了immutable.js这个文件只有4409行，但是最终的在查看该文件时候发现好多行的内容是丢失了，所以出现了错误。</p>
-<p><strong>接下来进入到~/.gitbook/versions/3.2.3/目录中，删除掉node_modules和package.json。这样子gitbook就可以正常使用了</strong></p>
-
+<p>百度了好长时间，一直都没有找到有效的解决方法。</p>
+        
       
 
       
@@ -744,11 +735,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">SCSS</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">SCSS</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
@@ -912,11 +903,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">SCSS</a>
+                <a href="javascript:void(0)" class="js-tag color4">CSS</a>
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">CSS</a>
+                <a href="javascript:void(0)" class="js-tag color5">SCSS</a>
               </li>
             
               <li class="article-tag-list-item">
