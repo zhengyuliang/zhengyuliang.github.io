@@ -6,18 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://zhengyuliang.github.io">
-  <title>zhengyuliang</title>
+  <title>7道javascript,让你深入理解自己的不足 | zhengyuliang</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前端开发工程师">
-<meta property="og:type" content="website">
-<meta property="og:title" content="zhengyuliang">
-<meta property="og:url" content="https://zhengyuliang.github.io/page/2/index.html">
+  <meta name="description" content="7道javascript题，让你理解基本的javascript  如果你符合JavaScript高级开发人员的资格，在编码面试中很有可能会被问到一些刁钻的问题。   1. 意外的全局变量问题 在以下代码中，typeof a和typeof b的值分别是什么：  12345678function foo() &amp;#123;  let a = b = 0;  a++;  return a;&amp;#125;fo">
+<meta name="keywords" content="javascript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="7道javascript,让你深入理解自己的不足">
+<meta property="og:url" content="https://zhengyuliang.github.io/2019/11/18/7道javascript-让你深入理解自己的不足/index.html">
 <meta property="og:site_name" content="zhengyuliang">
-<meta property="og:description" content="前端开发工程师">
+<meta property="og:description" content="7道javascript题，让你理解基本的javascript  如果你符合JavaScript高级开发人员的资格，在编码面试中很有可能会被问到一些刁钻的问题。   1. 意外的全局变量问题 在以下代码中，typeof a和typeof b的值分别是什么：  12345678function foo() &amp;#123;  let a = b = 0;  a++;  return a;&amp;#125;fo">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-11-18T07:20:36.709Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="zhengyuliang">
-<meta name="twitter:description" content="前端开发工程师">
+<meta name="twitter:title" content="7道javascript,让你深入理解自己的不足">
+<meta name="twitter:description" content="7道javascript题，让你理解基本的javascript  如果你符合JavaScript高级开发人员的资格，在编码面试中很有可能会被问到一些刁钻的问题。   1. 意外的全局变量问题 在以下代码中，typeof a和typeof b的值分别是什么：  12345678function foo() &amp;#123;  let a = b = 0;  a++;  return a;&amp;#125;fo">
   
     <link rel="alternative" href="/atom.xml" title="zhengyuliang" type="application/atom+xml">
   
@@ -141,37 +143,126 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-JavaScript遍历总结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-7道javascript-让你深入理解自己的不足" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/09/04/JavaScript遍历总结/">JavaScript遍历总结</a>
+    <h1 class="article-title" itemprop="name">
+      7道javascript,让你深入理解自己的不足
     </h1>
   
 
         
-        <a href="/2018/09/04/JavaScript遍历总结/" class="archive-article-date">
-  	<time datetime="2018-09-04T02:25:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-04</time>
+        <a href="/2019/11/18/7道javascript-让你深入理解自己的不足/" class="archive-article-date">
+  	<time datetime="2019-11-18T07:19:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-18</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="总结一下JS常用的遍历方法"><a href="#总结一下JS常用的遍历方法" class="headerlink" title="总结一下JS常用的遍历方法"></a>总结一下JS常用的遍历方法</h2><ul>
-<li>本文给大家总结了13种JavaScript 中的1循环遍历方法,每种方法通过实例代码给大家介绍的非常详细，具有一定的参考借鉴价值，需要的朋友可以参考下<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// array  object</span></span><br><span class="line"><span class="keyword">const</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line"><span class="keyword">const</span> obj = &#123;<span class="attr">a</span>:<span class="number">1</span>, <span class="attr">b</span>:<span class="number">2</span>, <span class="attr">c</span>:<span class="number">3</span>&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="1、for-循环"><a href="#1、for-循环" class="headerlink" title="1、for 循环"></a>1、for 循环</h3><ul>
-<li>for 循环是 Js 中最常用的一个循环工具，经常用于数组的循环遍历。
-        
+        <h3 id="7道javascript题，让你理解基本的javascript"><a href="#7道javascript题，让你理解基本的javascript" class="headerlink" title="7道javascript题，让你理解基本的javascript"></a>7道javascript题，让你理解基本的javascript</h3><blockquote>
+<p> 如果你符合JavaScript高级开发人员的资格，在编码面试中很有可能会被问到一些刁钻的问题。 </p>
+</blockquote>
+<h4 id="1-意外的全局变量"><a href="#1-意外的全局变量" class="headerlink" title="1. 意外的全局变量"></a>1. 意外的全局变量</h4><h5 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h5><p> 在以下代码中，<code>typeof a</code>和<code>typeof b</code>的值分别是什么： </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> a = b = <span class="number">0</span>;</span><br><span class="line">  a++;</span><br><span class="line">  <span class="keyword">return</span> a;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">foo();</span><br><span class="line"><span class="keyword">typeof</span> a; <span class="comment">// =&gt; ???typeof b; // =&gt; ???</span></span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h5 id="答案"><a href="#答案" class="headerlink" title="答案"></a>答案</h5><p>让我们仔细看看第2行：<code>let a = b = 0</code>。这个语句确实声明了一个局部变量<code>a</code>。但是，它确实声明了一个<em>全局</em>变量<code>b</code>。</p>
+<p>在<code>foo()</code>作用域或全局作用域中都没有声明变量 <code>b</code> ”。因此JavaScript将表达式 <code>b = 0</code> 解释为 <code>window.b = 0</code>。</p>
+<p> <strong><code>b</code>是一个偶然创建的全局变量。</strong> </p>
+<p> 在浏览器中，上述代码片段相当于: </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> a;  <span class="built_in">window</span>.b = <span class="number">0</span>;  a = <span class="built_in">window</span>.b;  a++;</span><br><span class="line">  <span class="keyword">return</span> a;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">foo();</span><br><span class="line"><span class="keyword">typeof</span> a;        <span class="comment">// =&gt; 'undefined'</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="built_in">window</span>.b; <span class="comment">// =&gt; 'number'</span></span><br></pre></td></tr></table></figure>
+<p><code>typeof a</code>是 <code>&#39;undefined&#39;</code>。变量<code>a</code>仅在 <code>foo()</code>范围内声明，在外部范围内不可用。</p>
+<p><code>typeof b</code>等于<code>&#39;number&#39;</code>。<code>b</code>是一个值为 <code>0</code>的全局变量。</p>
+<h4 id="2-数组-length-属性"><a href="#2-数组-length-属性" class="headerlink" title="2. 数组 length 属性"></a>2. 数组 length 属性</h4><h5 id="问题-1"><a href="#问题-1" class="headerlink" title="问题"></a>问题</h5><p> <code>clothes[0]</code> 的值是什么： </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> clothes = [<span class="string">'jacket'</span>, <span class="string">'t-shirt'</span>];</span><br><span class="line">clothes.length = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">clothes[<span class="number">0</span>]; <span class="comment">// =&gt; ???</span></span><br></pre></td></tr></table></figure>
+<h5 id="答案-1"><a href="#答案-1" class="headerlink" title="答案"></a>答案</h5><p> 数组对象的 length 属性有一个 特殊的行为: </p>
+<blockquote>
+<p> 减少<code>length</code>属性的值有一个副作用，就是会删除索引位于新旧长度值之间的元素。 </p>
+</blockquote>
+<p>因为 <code>length</code>的这种行为，当JavaScript执行<code>clothes.length = 0</code> 时，数组 <code>clothes</code> 中的所有项都被删除了。</p>
+<p><code>clothes[0]</code> 是<code>undefined</code>，因为 <code>clothes</code> 数组被清空了。</p>
+<h4 id="3-鹰眼测试"><a href="#3-鹰眼测试" class="headerlink" title="3. 鹰眼测试"></a>3. 鹰眼测试</h4><h5 id="问题-2"><a href="#问题-2" class="headerlink" title="问题"></a>问题</h5><p> <code>numbers</code> 数组的内容是什么： </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> length = <span class="number">4</span>;</span><br><span class="line"><span class="keyword">const</span> numbers = [];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; length; i++);&#123;</span><br><span class="line">  numbers.push(i + <span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">numbers; <span class="comment">// =&gt; ???</span></span><br></pre></td></tr></table></figure>
+<h5 id="答案-2"><a href="#答案-2" class="headerlink" title="答案"></a>答案</h5><p> 让我们仔细看看出现在左花括号<code>{</code>前面的分号<code>;</code> ： </p>
+<p><strong>很容易忽略这个分号，而它创建了一个<em>空语句</em>。空语句是不做任何事情的语句。</strong></p>
+<p><code>for()</code> 在空语句（什么也不做）上循环了 4 次，忽略了实际上往数组里添加元素的代码块<code>{ numbers.push(i + 1); }</code>。</p>
+<p> 上述代码等同于： </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> length = <span class="number">4</span>;</span><br><span class="line"><span class="keyword">const</span> numbers = [];</span><br><span class="line"><span class="keyword">var</span> i;</span><br><span class="line"><span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; length; i++) &#123;</span><br><span class="line">  <span class="comment">// does nothing</span></span><br><span class="line">&#125;</span><br><span class="line">&#123; </span><br><span class="line">  <span class="comment">// a simple block</span></span><br><span class="line">  numbers.push(i + <span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">numbers; <span class="comment">// =&gt; [5]</span></span><br></pre></td></tr></table></figure>
+<p><code>for()</code>递增变量<code>i</code>直到<code>4</code>。然后JavaScript 进入代码块 <code>{ numbers.push(i + 1); }</code>，将<code>4 + 1</code> 添加 到<code>numbers</code>数组中。</p>
+<p>这样 <code>numbers</code> 就是 <code>[5]</code>.</p>
+<h4 id="4-自动插入分号"><a href="#4-自动插入分号" class="headerlink" title="4. 自动插入分号"></a>4. 自动插入分号</h4><h5 id="问题-3"><a href="#问题-3" class="headerlink" title="问题"></a>问题</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">arrayFromValue</span>(<span class="params">item</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span></span><br><span class="line">    [items];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">arrayFromValue(<span class="number">10</span>); <span class="comment">// =&gt; ???</span></span><br></pre></td></tr></table></figure>
+<h5 id="答案-3"><a href="#答案-3" class="headerlink" title="答案"></a>答案</h5><p><strong>很容易忽略<code>return</code>关键字和<code>[items]</code>表达式之间的换行。</strong></p>
+<p><strong>换行使JavaScript自动在<code>return</code>和<code>[items]</code>表达式之间插入一个分号。</strong></p>
+<p>这里有一段等价的代码，它在<code>return</code>后插入分号：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">arrayFromValue</span>(<span class="params">item</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span>;  [items];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">arrayFromValue(<span class="number">10</span>); <span class="comment">// =&gt; undefined</span></span><br></pre></td></tr></table></figure>
+<p>函数中的 <code>return;</code> 导致它返回 <code>undefined</code>。</p>
+<p>因此 <code>arrayFromValue(10)</code> 的值是 <code>undefined</code>。</p>
+<h4 id="5-经典问题：坑爹的闭包"><a href="#5-经典问题：坑爹的闭包" class="headerlink" title="5. 经典问题：坑爹的闭包"></a>5. 经典问题：坑爹的闭包</h4><h4 id="问题-4"><a href="#问题-4" class="headerlink" title="问题"></a>问题</h4><p> 以下脚本将会在控制台输出什么： </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> i;</span><br><span class="line"><span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++) &#123;</span><br><span class="line">  <span class="keyword">const</span> log = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(i);  &#125;</span><br><span class="line">  setTimeout(log, <span class="number">100</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="答案-4"><a href="#答案-4" class="headerlink" title="答案"></a>答案</h5><p>如果你之前没有听说过这个棘手的问题，你的答案很可能是<code>0</code>, <code>1</code> 和 <code>2</code>，这是不正确的。当我第一次尝试解答它时，我的答案也是这样！</p>
+<p>执行这个代码段包含两个步骤。<br> <strong>步骤 1</strong></p>
+<ol>
+<li><code>for()</code>迭代3次。在每次迭代过程中，都会创建一个新的函数<code>log()</code>，它捕获变量 <code>i</code>。然后<code>setTimout()</code>执行<code>log()</code>。</li>
+<li>当<code>for()</code>循环完成时，<code>i</code>变量的值为<code>3</code>。</li>
+</ol>
+<p><code>log()</code>是一个捕获变量 <code>i</code> 的闭包，它在<code>for()</code>循环的外部作用域定义。重要的是要理解闭包从词法上捕获了<em>变量</em><code>i</code> 。<br> <strong>步骤 2</strong></p>
+<p>第2步在 100 毫秒后发生：</p>
+<p><code>setTimeout()</code>调用了队列中的3个<code>log()</code> 回调。<code>log()</code> 读取变量 <code>i</code>的<em>当前值</em>，即<code>3</code>，并记录到控制台<code>3</code>。</p>
+<p><strong>这就是为什么控制台输出<code>3</code>, <code>3</code> 和<code>3</code>。</strong></p>
+<p><em>你知道怎样让代码输出 <code>0</code>, <code>1</code>, 和 <code>2</code>吗？请在评论里写出你的方案。</em></p>
+<h4 id="6-浮点数问题"><a href="#6-浮点数问题" class="headerlink" title="6. 浮点数问题"></a>6. 浮点数问题</h4><h5 id="问题-5"><a href="#问题-5" class="headerlink" title="问题"></a>问题</h5><p> 等号判断的结果是什么？ </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">0.1</span> + <span class="number">0.2</span> === <span class="number">0.3</span> <span class="comment">// =&gt; ???</span></span><br></pre></td></tr></table></figure>
+<h5 id="答案-5"><a href="#答案-5" class="headerlink" title="答案"></a>答案</h5><p> 首先，我们看看<code>0.1 + 0.2</code> 的值： </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">0.1</span> + <span class="number">0.2</span>; <span class="comment">// =&gt; 0.30000000000000004</span></span><br></pre></td></tr></table></figure>
+<p><code>0.1</code> 和 <code>0.2</code> 的和 <em>不完全等于</em>  <code>0.3</code>，而是略大于 <code>0.3</code>。</p>
+<p>由于浮点数在二进制中的编码机制，像浮点数的加法这样的操作会受到舍入误差的影响。</p>
+<p>简单地说，直接比较浮点数是不精确的。</p>
+<p>因此 <code>0.1 + 0.2 === 0.3</code> 是 <code>false</code>.</p>
+<h4 id="7-变量提升"><a href="#7-变量提升" class="headerlink" title="7. 变量提升"></a>7. 变量提升</h4><h5 id="问题-6"><a href="#问题-6" class="headerlink" title="问题"></a>问题</h5><p> 如果在声明之前访问<code>myVar</code>和<code>myConst</code>会发生什么? </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">myVar;   <span class="comment">// =&gt; ???myConst; // =&gt; ???</span></span><br><span class="line"><span class="keyword">var</span> myVar = <span class="string">'value'</span>;</span><br><span class="line"><span class="keyword">const</span> myConst = <span class="number">3.14</span>;</span><br></pre></td></tr></table></figure>
+<h5 id="答案-6"><a href="#答案-6" class="headerlink" title="答案"></a>答案</h5><p> 变量提升和暂时性死区是影响JavaScript变量生命周期的两个重要概念。 </p>
+<p>在声明之前访问 <code>myVar</code> 结果为<code>undefined</code>。一个被提升的<code>var</code>变量，在它的初始化之前，有一个 <code>undefined</code>的值。</p>
+<p>但是，在声明之前访问<code>myConst</code>会抛出 <code>ReferenceError</code>。在声明行<code>const myConst = 3.14</code>之前，<code>const</code> 变量处于暂时死区。</p>
+<blockquote>
+<p>NND，这几道题，我一直也没有啥留意的，要我首次做，应该挂的也比较居多。这次从简书上看到，就记录一下，涨涨知识。吼~~~~</p>
+</blockquote>
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢您的支持<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/money/alipay-min.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/money/weixin-min.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -191,16 +282,24 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/09/04/JavaScript遍历总结/">展开全文 >></a>
-        </p>
-      
 
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2019/11/18/JavaScript之防抖（Debounce）和节流（Throttle）/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JavaScript之防抖（Debounce）和节流（Throttle）</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -220,102 +319,14 @@
 
 
 
-
-  
-    <article id="post-SCSS-详解" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/31/SCSS-详解/">SCSS --详解</a>
-    </h1>
-  
-
-        
-        <a href="/2018/08/31/SCSS-详解/" class="archive-article-date">
-  	<time datetime="2018-08-31T06:40:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-31</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="https://raw.githubusercontent.com/zhengyuliang/Blog-Back-Up/master/images/SCSS.jpg" style="width: 100%;" title="SCSS 详解"></p>
-<h2 id="1-CSS预处理器"><a href="#1-CSS预处理器" class="headerlink" title="1. CSS预处理器"></a>1. CSS预处理器</h2><ul>
-<li>定义了一种新的专门的编程语言，编译后成正常的CSS文件。为CSS增加一些编程的特性，无需考虑浏览器的兼容问题，让CSS更加简洁，适应性更强，可读性更佳，更易于代码的维护等诸多好处。</li>
-<li>CSS预处理器语言：scss（sass）、LESSCSSS等；</li>
-</ul>
-<h2 id="2-Sass和SCSS的区别"><a href="#2-Sass和SCSS的区别" class="headerlink" title="2.Sass和SCSS的区别"></a>2.Sass和SCSS的区别</h2><ul>
-<li>文件扩展名不同：“.sass”和“.scss”；</li>
-<li>Sass是以严格缩进式语法规则来书写的，不带大括号和分号；而SCSS的语法和CSS书写语法类似。</li>
-</ul>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">SCSS</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">CSS预处理器语言</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/08/31/SCSS-详解/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-    </nav>
+  
+
+  
+
+  
+
   
 
 
@@ -343,8 +354,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
