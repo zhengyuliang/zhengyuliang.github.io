@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://zhengyuliang.github.io">
-  <title>Gitbook踩坑记 | zhengyuliang</title>
+  <title>vue 高级技巧 | zhengyuliang</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Gitbook使用时出现Error loading version latest 我使用的操作系统版本是Ubuntu 16.04。但是装完gitbook之后会出现下面的错误：  123456789101112131415161718flow@flow-P7xxTM:~/os/testGitBook$ gitbook initError loading version latest: /home/f">
-<meta name="keywords" content="bug,gitbook">
+  <meta name="description" content="1.css 局部样式 vue 中style样式添加scoped属性表示它的样式只作用于当前组件，样式私有化。 但是当前组件的根组件会受到父组件样式的影响。（比如父组件有个.box{background:red}, 如果子组件即当前组件的根组件类名也为box，那背景也会为red） 其中渲染的原理：   给HTML的DOM节点添加一个不重复的data属性 来表示唯一性  在对应的css选择器末尾添加一">
+<meta name="keywords" content="javascript,vue">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Gitbook踩坑记">
-<meta property="og:url" content="https://zhengyuliang.github.io/2019/11/12/Gitbook踩坑记/index.html">
+<meta property="og:title" content="vue 高级技巧">
+<meta property="og:url" content="https://zhengyuliang.github.io/2019/11/19/vue-高级技巧/index.html">
 <meta property="og:site_name" content="zhengyuliang">
-<meta property="og:description" content="Gitbook使用时出现Error loading version latest 我使用的操作系统版本是Ubuntu 16.04。但是装完gitbook之后会出现下面的错误：  123456789101112131415161718flow@flow-P7xxTM:~/os/testGitBook$ gitbook initError loading version latest: /home/f">
+<meta property="og:description" content="1.css 局部样式 vue 中style样式添加scoped属性表示它的样式只作用于当前组件，样式私有化。 但是当前组件的根组件会受到父组件样式的影响。（比如父组件有个.box{background:red}, 如果子组件即当前组件的根组件类名也为box，那背景也会为red） 其中渲染的原理：   给HTML的DOM节点添加一个不重复的data属性 来表示唯一性  在对应的css选择器末尾添加一">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-11-12T09:51:09.524Z">
+<meta property="og:updated_time" content="2019-11-19T07:59:07.558Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Gitbook踩坑记">
-<meta name="twitter:description" content="Gitbook使用时出现Error loading version latest 我使用的操作系统版本是Ubuntu 16.04。但是装完gitbook之后会出现下面的错误：  123456789101112131415161718flow@flow-P7xxTM:~/os/testGitBook$ gitbook initError loading version latest: /home/f">
+<meta name="twitter:title" content="vue 高级技巧">
+<meta name="twitter:description" content="1.css 局部样式 vue 中style样式添加scoped属性表示它的样式只作用于当前组件，样式私有化。 但是当前组件的根组件会受到父组件样式的影响。（比如父组件有个.box{background:red}, 如果子组件即当前组件的根组件类名也为box，那背景也会为red） 其中渲染的原理：   给HTML的DOM节点添加一个不重复的data属性 来表示唯一性  在对应的css选择器末尾添加一">
   
     <link rel="alternative" href="/atom.xml" title="zhengyuliang" type="application/atom+xml">
   
@@ -143,42 +143,104 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Gitbook踩坑记" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-vue-高级技巧" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Gitbook踩坑记
+      vue 高级技巧
     </h1>
   
 
         
-        <a href="/2019/11/12/Gitbook踩坑记/" class="archive-article-date">
-  	<time datetime="2019-11-12T09:42:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-12</time>
+        <a href="/2019/11/19/vue-高级技巧/" class="archive-article-date">
+  	<time datetime="2019-11-19T07:56:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-19</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="Gitbook使用时出现Error-loading-version-latest"><a href="#Gitbook使用时出现Error-loading-version-latest" class="headerlink" title="Gitbook使用时出现Error loading version latest"></a>Gitbook使用时出现Error loading version latest</h3><blockquote>
-<p>我使用的操作系统版本是Ubuntu 16.04。<br>但是装完gitbook之后会出现下面的错误：</p>
-</blockquote>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">flow@flow-P7xxTM:~/os/testGitBook$ gitbook init</span><br><span class="line">Error loading version latest: /home/flow/.gitbook/versions/3.2.3/node_modules/immutable/dist/immutable.js:4409</span><br><span class="line">&#125;);</span><br><span class="line">^</span><br><span class="line"></span><br><span class="line">SyntaxError: Unexpected token &#125;</span><br><span class="line">    at new Script (vm.js:83:7)</span><br><span class="line">    at createScript (vm.js:267:10)</span><br><span class="line">    at Object.runInThisContext (vm.js:319:10)</span><br><span class="line">    at Module._compile (internal/modules/cjs/loader.js:685:28)</span><br><span class="line">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:733:10)</span><br><span class="line">    at Module.load (internal/modules/cjs/loader.js:620:32)</span><br><span class="line">    at tryModuleLoad (internal/modules/cjs/loader.js:560:12)</span><br><span class="line">    at Function.Module._load (internal/modules/cjs/loader.js:552:3)</span><br><span class="line">    at Module.require (internal/modules/cjs/loader.js:658:17)</span><br><span class="line">    at require (internal/modules/cjs/helpers.js:22:18)</span><br><span class="line"></span><br><span class="line">TypeError: Cannot read property 'commands' of null</span><br></pre></td></tr></table></figure>
-<p>百度了好长时间，一直都没有找到有效的解决方法。</p>
+        <h3 id="1-css-局部样式"><a href="#1-css-局部样式" class="headerlink" title="1.css 局部样式"></a><strong>1.css 局部样式</strong></h3><ul>
+<li>vue 中style样式添加scoped属性表示它的样式只作用于当前组件，样式私有化。</li>
+<li>但是当前组件的根组件会受到父组件样式的影响。（比如父组件有个.box{background:red}, 如果子组件即当前组件的根组件类名也为box，那背景也会为red）</li>
+<li><p>其中渲染的原理： </p>
+<ul>
+<li>给HTML的DOM节点添加一个不重复的data属性 来表示唯一性 </li>
+<li>在对应的css选择器末尾添加一个当前组件的data属性选择器来私有化 </li>
+</ul>
+</li>
+<li><p>如果使用了scoped属性后，想让组件内部样式被外部控制，只需要css添加 <code>deep</code>属性即可 </p>
+</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;style lang="less" scoped&gt;</span><br><span class="line"><span class="selector-class">.text-box</span> &#123;</span><br><span class="line">  /deep/ input &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">166px</span>;</span><br><span class="line">    <span class="attribute">text-align</span>: center;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
-<p>接下来尝试着为gitbook降低版本，那么在降版本之前需要把gitbook删除掉，需要执行下面的命令：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo npm uninstall -g gitbook</span><br></pre></td></tr></table></figure>
-<p>接下来安装2.3.0版本试试看</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo npm install -g gitbook-cli@2.3.0</span><br></pre></td></tr></table></figure>
-<p>然后进入到目录：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd ~/.gitbook/versions/3.2.3/</span><br><span class="line">sudo npm i</span><br></pre></td></tr></table></figure></p>
-<p>接下来执行：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gitbook init</span><br></pre></td></tr></table></figure>
-<p>我们可以看到SUMMARY.md和README.md能够被正常创建，但是如果切回到/home中的其他目录，还是会出现错误。</p>
-<p>接下来的问题我发现了immutable.js这个文件只有4409行，但是最终的在查看该文件时候发现好多行的内容是丢失了，所以出现了错误。</p>
-<p><strong>接下来进入到~/.gitbook/versions/3.2.3/目录中，删除掉node_modules和package.json。这样子gitbook就可以正常使用了</strong></p>
+<h3 id="2-Vue-filter-全局过滤器"><a href="#2-Vue-filter-全局过滤器" class="headerlink" title="2. Vue.filter 全局过滤器"></a><strong>2. Vue.filter 全局过滤器</strong></h3><ul>
+<li>过滤器的目的主要是为了对数据进行转换</li>
+<li>computed计算属性也可以转换，<strong>但是computed不能接受参数，</strong>只能针对某一个Vue内部属性进行转换，但是filter可以接受参数。</li>
+</ul>
+<p><em>注册</em></p>
+<p> <strong>全局过滤器</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Vue.filter(<span class="string">'globalFilter'</span>, value=&gt;&#123;....&#125;)</span><br></pre></td></tr></table></figure>
+<p><strong>组件过滤器</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">filters:&#123;</span><br><span class="line">  testFilters: <span class="function"><span class="params">value</span>=&gt;</span>&#123;...&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注：一直不怎么会用全局过滤器，有关全局的都不清楚，这要重点研究一下这里的知识</p>
+</blockquote>
+<p>使用</p>
+<p> <strong>在双花括号插值</strong> </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123;message | testFilter&#125;&#125;</span><br></pre></td></tr></table></figure>
+<p> <strong>在v-bind表达式中使用</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div v-bind:=id=<span class="string">"rawId | testFilter"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<h3 id="3-Vue-nextTick"><a href="#3-Vue-nextTick" class="headerlink" title="3. Vue.nextTick"></a><strong>3. Vue.nextTick</strong></h3><ul>
+<li>用法： 在下次 DOM 更新循环结束之后执行延迟回调。在修改数据之后立即使用这个方法，获取更新后的 DOM</li>
+<li>那么这句话是什么意思呢，其实简单来说就是，当我们修改数据后，<strong>视图层的数据更新是异步的</strong>，既：当修改过数据后立即输出绑定改数据的dom元素，该dom元素中的数据还是未更新过的。</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div id=<span class="string">"app"</span>&gt;</span><br><span class="line">    &lt;span ref=<span class="string">"name"</span>&gt;&#123;&#123; name &#125;&#125;&lt;<span class="regexp">/span&gt;</span></span><br><span class="line"><span class="regexp">    &lt;button type="button" @click="change"&gt;改变&lt;/</span>button&gt;</span><br><span class="line">  &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  name: <span class="string">'App'</span>,</span><br><span class="line">  data() &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      list: [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],</span><br><span class="line">      name: <span class="string">'tom'</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    change() &#123;</span><br><span class="line">      <span class="keyword">this</span>.name = <span class="string">'lucy'</span>;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="keyword">this</span>.$refs.name.innerHTML, <span class="string">'dom未更新'</span>); <span class="comment">// 输出tom</span></span><br><span class="line">      <span class="keyword">this</span>.$nextTick(<span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.$refs.name.innerHTML, <span class="string">'dom已更新'</span>); <span class="comment">// 输出tom</span></span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="4-mixins"><a href="#4-mixins" class="headerlink" title="4. mixins"></a><strong>4. mixins</strong></h3><blockquote>
+<p> 混入 (mixin) 提供了一种非常灵活的方式，来分发 Vue 组件中的可复用功能。一个混入对象可以包含任意组件选项。当组件使用混入对象时，所有混入对象的选项将被“混合”进入该组件本身的选项。</p>
+</blockquote>
+<p>有以下几个特点</p>
+<p> 当组件和混入对象含有同名选项时，这些<strong>选项将以恰当的方式进行“合并”</strong>。<br>比如，数据对象在内部会进行递归合并，并在发生冲突时以组件数据优先 </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> mixin = &#123;</span><br><span class="line">  data: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      message: <span class="string">'hello'</span>,</span><br><span class="line">      foo: <span class="string">'abc'</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  mixins: [mixin],</span><br><span class="line">  data: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      message: <span class="string">'goodbye'</span>,</span><br><span class="line">      bar: <span class="string">'def'</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  created: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.$data)</span><br><span class="line">    <span class="comment">// =&gt; &#123; message: "goodbye", foo: "abc", bar: "def" &#125;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p> 同名钩子函数将合并为一个数组，因此都将被调用。另外，<strong>混入对象的钩子将在组件自身钩子之前调用</strong>。 </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> mixin = &#123;</span><br><span class="line">  created: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'混入对象的钩子被调用'</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  mixins: [mixin],</span><br><span class="line">  created: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'组件钩子被调用'</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// =&gt; "混入对象的钩子被调用"</span></span><br><span class="line"><span class="comment">// =&gt; "组件钩子被调用"</span></span><br></pre></td></tr></table></figure>
+<p> 值为对象的选项，例如 methods、components 和 directives，将被合并为同一个对象。<strong>两个对象键名冲突时，取组件对象的键值对</strong>。 </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> mixin = &#123;</span><br><span class="line">  methods: &#123;</span><br><span class="line">    foo: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">'foo'</span>)</span><br><span class="line">    &#125;,</span><br><span class="line">    conflicting: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">'from mixin'</span>)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  mixins: [mixin],</span><br><span class="line">  methods: &#123;</span><br><span class="line">    bar: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">'bar'</span>)</span><br><span class="line">    &#125;,</span><br><span class="line">    conflicting: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">'from self'</span>)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">vm.foo() <span class="comment">// =&gt; "foo"</span></span><br><span class="line">vm.bar() <span class="comment">// =&gt; "bar"</span></span><br><span class="line">vm.conflicting() <span class="comment">// =&gt; "from self"</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>当然也可以 <strong>全局混入</strong></li>
+<li>混入也可以进行全局注册。使用时格外小心！一旦使用全局混入，它将影响每一个之后创建的 Vue 实例。使用恰当时，这可以用来为自定义选项注入处理逻辑。</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 为自定义的选项 'myOption' 注入一个处理器。</span></span><br><span class="line">Vue.mixin(&#123;</span><br><span class="line">  created: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> myOption = <span class="keyword">this</span>.$options.myOption</span><br><span class="line">    <span class="keyword">if</span> (myOption) &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(myOption)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  myOption: <span class="string">'hello!'</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// =&gt; "hello!"</span></span><br></pre></td></tr></table></figure>
+<h3 id="5-watch"><a href="#5-watch" class="headerlink" title="5. watch"></a><strong>5. watch</strong></h3><ul>
+<li>类型：<code>{ [key: string]: string | Function | Object | Array }</code> </li>
+<li>一个对象，键是需要观察的表达式，值是对应回调函数。值也可以是方法名，或者包含选项的对象。Vue 实例将会在实例化时调用 $watch()，遍历 watch 对象的每一个属性</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  data: &#123;</span><br><span class="line">    a: <span class="number">1</span>,</span><br><span class="line">    b: <span class="number">2</span>,</span><br><span class="line">    c: <span class="number">3</span>,</span><br><span class="line">    d: <span class="number">4</span>,</span><br><span class="line">    e: &#123;</span><br><span class="line">      f: &#123;</span><br><span class="line">        g: <span class="number">5</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  watch: &#123;</span><br><span class="line">    a: <span class="function"><span class="keyword">function</span> (<span class="params">val, oldVal</span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">'new: %s, old: %s'</span>, val, oldVal)</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">// 方法名</span></span><br><span class="line">    b: <span class="string">'someMethod'</span>,</span><br><span class="line">    <span class="comment">// 该回调会在任何被侦听的对象的 property 改变时被调用，不论其被嵌套多深</span></span><br><span class="line">    c: &#123;</span><br><span class="line">      handler: <span class="function"><span class="keyword">function</span> (<span class="params">val, oldVal</span>) </span>&#123; <span class="comment">/* ... */</span> &#125;,</span><br><span class="line">      deep: <span class="literal">true</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">// 该回调将会在侦听开始之后被立即调用</span></span><br><span class="line">    d: &#123;</span><br><span class="line">      handler: <span class="string">'someMethod'</span>,</span><br><span class="line">      immediate: <span class="literal">true</span></span><br><span class="line">    &#125;,</span><br><span class="line">    e: [</span><br><span class="line">      <span class="string">'handle1'</span>,</span><br><span class="line">      <span class="function"><span class="keyword">function</span> <span class="title">handle2</span> (<span class="params">val, oldVal</span>) </span>&#123; <span class="comment">/* ... */</span> &#125;,</span><br><span class="line">      &#123;</span><br><span class="line">        handler: <span class="function"><span class="keyword">function</span> <span class="title">handle3</span> (<span class="params">val, oldVal</span>) </span>&#123; <span class="comment">/* ... */</span> &#125;,</span><br><span class="line">        <span class="comment">/* ... */</span></span><br><span class="line">      &#125;</span><br><span class="line">    ],</span><br><span class="line">    <span class="comment">//  如果只是监听e.f改变，可以只监听e.f，比监听e deep： true要好</span></span><br><span class="line">    <span class="string">'e.f'</span>: <span class="function"><span class="keyword">function</span> (<span class="params">val, oldVal</span>) </span>&#123; <span class="comment">/* ... */</span> &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line">vm.a = <span class="number">2</span> <span class="comment">// =&gt; new: 2, old: 1</span></span><br></pre></td></tr></table></figure>
+<h3 id="6-Vue-set"><a href="#6-Vue-set" class="headerlink" title="6. Vue.$set"></a><strong>6. Vue.$set</strong></h3><ul>
+<li>问题<br> <strong>如果在实例创建之后添加新的属性到实例上，它不会触发视图更新。 或者 索引数组的修改，vue无法劫持该数据进行响应式变化</strong></li>
+<li>当你把一个普通的 JavaScript 对象传入 Vue 实例作为 <code>data</code> 选项，Vue 将遍历此对象所有的属性，并使用<code>Object.defineproperty</code>把这些属性全部转为 <code>getter/setter</code></li>
+<li>受现代 JavaScript 的限制 (以及废弃 Object.observe)，Vue 不能检测到对象属性的添加或删除。由于 Vue 会在初始化实例时对属性执行 getter/setter 转化过程，所以属性必须在 data 对象上存在才能让 Vue 转换它，这样才能让它是响应的</li>
+<li>解决方案</li>
+<li>Vue 不允许在已经创建的实例上动态添加新的根级响应式属性 (root-level reactive property)。然而它可以使用 Vue.set(object, key, value) 方法将响应属性添加到嵌套的对象上</li>
+</ul>
+<p>Vue.set(vm.obj, ‘e’, 0)<br> 您还可以使用 vm.$set 实例方法，这也是全局 Vue.set 方法的别名：</p>
+<p>this.$set(this.obj,’e’,02)</p>
+<ul>
+<li>有时你想向已有对象上添加一些属性，例如使用 Object.assign() 或 _.extend() 方法来添加属性。但是，添加到对象上的新属性不会触发更新。在这种情况下可以创建一个新的对象，让它包含原对象的属性和新的属性：</li>
+<li>// 代替 Object.assign(this.obj, { a: 1, e: 2 })</li>
+<li>this.obj= Object.assign({}, this.obj, { a: 1, e: 2 })</li>
+</ul>
+<h3 id="7-Vue的通信方式"><a href="#7-Vue的通信方式" class="headerlink" title="7. Vue的通信方式"></a><strong>7. Vue的通信方式</strong></h3><blockquote>
+<p>父子组件通信： v-bind:attr ，props<br> provide, inject (祖孙通信)<br> $attr、 $listeners<br> $parent, $children<br> ref<br> $emit, $on<br> Vuex</p>
+</blockquote>
+<p> <strong>provide inject</strong> </p>
+<p> 父组件 </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"test"</span>&gt;</span><br><span class="line">    &lt;son prop=<span class="string">"data"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">son</span>&gt;</span></span></span><br><span class="line">  &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>template&gt;</span><br><span class="line"> </span><br><span class="line">&lt;script&gt;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  name: <span class="string">"Test"</span>,</span><br><span class="line">  provide: &#123;</span><br><span class="line">    name: <span class="string">"Garrett"</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+<p> 孙组件 </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &#123;&#123;name&#125;&#125;</span><br><span class="line">    &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>template&gt;</span><br><span class="line"> </span><br><span class="line">&lt;script&gt;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">    name: <span class="string">'Grandson'</span>,</span><br><span class="line">    inject: [name]</span><br><span class="line">&#125;</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
 
       
 
@@ -223,11 +285,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">bug</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">gitbook</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
         		</li>
       		
 		</ul>
@@ -246,18 +308,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/11/14/axios知识点/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          axios知识点
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/11/07/cookie、sessionStorage 和 localStorage 的区别/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">cookie、sessionStorage 和 localStorage 的区别</div>
+    <a href="/2019/11/18/7道javascript-让你深入理解自己的不足/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">7道javascript,让你深入理解自己的不足</div>
       <i class="icon-circle-right"></i>
     </a>
   
