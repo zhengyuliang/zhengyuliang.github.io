@@ -6,18 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://zhengyuliang.github.io">
-  <title>zhengyuliang</title>
+  <title>Vue.set()和this.()应用的场景 | zhengyuliang</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前端开发工程师">
-<meta property="og:type" content="website">
-<meta property="og:title" content="zhengyuliang">
-<meta property="og:url" content="https://zhengyuliang.github.io/page/2/index.html">
+  <meta name="description" content="背景：在vue中改变对象的属性值或者通过索引改变数组时，对应修改的字段不会重新在页面渲染。    例如：  1234567891011const vueInstance = new Vue(&amp;#123;  data: &amp;#123;    arr: [1, 2],    obj1: &amp;#123;        a: 3    &amp;#125;  &amp;#125;&amp;#125;);vueInstance.$">
+<meta name="keywords" content="vue">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vue.set()和this.()应用的场景">
+<meta property="og:url" content="https://zhengyuliang.github.io/2019/11/22/Vue-set-和this-应用的场景/index.html">
 <meta property="og:site_name" content="zhengyuliang">
-<meta property="og:description" content="前端开发工程师">
+<meta property="og:description" content="背景：在vue中改变对象的属性值或者通过索引改变数组时，对应修改的字段不会重新在页面渲染。    例如：  1234567891011const vueInstance = new Vue(&amp;#123;  data: &amp;#123;    arr: [1, 2],    obj1: &amp;#123;        a: 3    &amp;#125;  &amp;#125;&amp;#125;);vueInstance.$">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-11-22T02:54:26.706Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="zhengyuliang">
-<meta name="twitter:description" content="前端开发工程师">
+<meta name="twitter:title" content="Vue.set()和this.()应用的场景">
+<meta name="twitter:description" content="背景：在vue中改变对象的属性值或者通过索引改变数组时，对应修改的字段不会重新在页面渲染。    例如：  1234567891011const vueInstance = new Vue(&amp;#123;  data: &amp;#123;    arr: [1, 2],    obj1: &amp;#123;        a: 3    &amp;#125;  &amp;#125;&amp;#125;);vueInstance.$">
   
     <link rel="alternative" href="/atom.xml" title="zhengyuliang" type="application/atom+xml">
   
@@ -141,269 +143,91 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-javaScript-排序算法总结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-Vue-set-和this-应用的场景" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/09/11/javaScript-排序算法总结/">javaScript-排序算法总结</a>
+    <h1 class="article-title" itemprop="name">
+      Vue.set()和this.()应用的场景
     </h1>
   
 
         
-        <a href="/2018/09/11/javaScript-排序算法总结/" class="archive-article-date">
-  	<time datetime="2018-09-11T08:44:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-11</time>
+        <a href="/2019/11/22/Vue-set-和this-应用的场景/" class="archive-article-date">
+  	<time datetime="2019-11-22T02:53:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-22</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
-<p>排序算法可能是你学编程第一个学习的算法，还记得冒泡吗？</p>
+        <blockquote>
+<p> 背景：在vue中改变对象的属性值或者通过索引改变数组时，对应修改的字段不会重新在页面渲染。 </p>
 </blockquote>
-<p>当然，排序和查找两类算法是面试的热门选项。如果你是一个会写快排的程序猿，面试官在比较你和一个连快排都不会写的人的时候，会优先选择你的。那么，前端需要会排序吗？答案是毋庸置疑的，必须会。现在的前端对计算机基础要求越来越高了，如果连排序这些算法都不会，那么发展前景就有限了。本篇将会总结一下，在前端的一些排序算法。</p>
-<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>首先，我们可以先来看一下js自身的排序算法<code>sort()</code>。</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javaScript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/09/11/javaScript-排序算法总结/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Grid布局指南" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/09/05/Grid布局指南/">Grid布局指南</a>
-    </h1>
-  
-
-        
-        <a href="/2018/09/05/Grid布局指南/" class="archive-article-date">
-  	<time datetime="2018-09-05T05:48:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-05</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <html><br>    <div><br>        <img src="https://raw.githubusercontent.com/zhengyuliang/Blog-Back-Up/master/images/grid.jpg" style="width: 100%;" title="SCSS 详解"><br>    </div><br></html>
-
-<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>CSS网格布局（又称“网格”），是一种二维网格布局系统。CSS在处理网页布局方面一直做的不是很好。<br>一开始我们用的是<strong>table</strong>（表格）布局，然后用<strong>float</strong>(浮动)，<strong>position</strong>（定位）和<strong>inline-block</strong>（行内块）布局，但是这些方法本质上是hack，遗漏了很多功能，例如垂直居中。<br>后来出了<strong>flexbox</strong>(盒子布局)，解决了很多布局问题，但是它仅仅是一维布局，而不是复杂的二维布局，实际上它们（flexbox与grid）能很好的配合使用。<br>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/09/05/Grid布局指南/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="css3-实现三栏布局（左右定宽，中间自适应）几种方法" class="article article-type-css3  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/09/05/实现三栏布局（左右定宽，中间自适应）几种方法/">实现三栏布局（左右定宽，中间自适应）几种方法</a>
-    </h1>
-  
-
-        
-        <a href="/2018/09/05/实现三栏布局（左右定宽，中间自适应）几种方法/" class="archive-article-date">
-  	<time datetime="2018-09-05T02:44:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-05</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>实现三栏布局，左右定宽中间自适应。（四种方式）</p>
-<h3 id="1、flex-目前常用方法，可以自适调节页面宽高等；"><a href="#1、flex-目前常用方法，可以自适调节页面宽高等；" class="headerlink" title="1、flex: 目前常用方法，可以自适调节页面宽高等；"></a>1、flex: 目前常用方法，可以自适调节页面宽高等；</h3><ul>
-<li>display: flex。flex:参数判断子对象多少宽度
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/09/05/实现三栏布局（左右定宽，中间自适应）几种方法/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Personal" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/09/05/Personal/">个人简历- Personal resume</a>
-    </h1>
-  
-
-        
-        <a href="/2018/09/05/Personal/" class="archive-article-date">
-  	<time datetime="2018-09-05T02:44:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-05</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="历程-Personal"><a href="#历程-Personal" class="headerlink" title="历程 - [Personal]"></a>历程 - [Personal]</h2><blockquote>
-<p>毕业于工业设计专业，就职过产品设计\平面设计\防伪技术开发,做过UI设计，目前从事前端技术开发工作近十年。研究前端技术多年</p>
-</blockquote>
-<html><br>    <div><br>        <img src="https://raw.githubusercontent.com/zhengyuliang/Blog-Back-Up/master/images/Personal/personal.jpg" style="width: 100%;" title="SCSS 详解"><br>    </div><br></html>
-
+<p> 例如： </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> vueInstance = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  data: &#123;</span><br><span class="line">    arr: [<span class="number">1</span>, <span class="number">2</span>],</span><br><span class="line">    obj1: &#123;</span><br><span class="line">        a: <span class="number">3</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">vueInstance.$data.arr[<span class="number">0</span>] = <span class="number">3</span>;  <span class="comment">// 页面不会重新渲染</span></span><br><span class="line">vueInstance.$data.obj1.b = <span class="number">3</span>;  <span class="comment">// 页面不会重新渲染</span></span><br></pre></td></tr></table></figure>
+<p> 经过查看官方文档发现这部分说明如下： </p>
 <blockquote>
-<p>联系手机[<strong>tel</strong>]：<strong>18319924003</strong><br>电子邮箱[<strong>mail</strong>]：<a href="mailto:htzyl206@163.com" target="_blank" rel="noopener">htzyl206@163.com</a><br>微信[<strong>weixin</strong>]：<strong>htzyl206</strong><br>github: zhengyuliang<br>工作经验[<strong>Personal</strong>]：10+前端开发经验，专注前端开发多年   </p>
+<p><strong>Vue.set()</strong>向响应式对象中添加一个属性，并确保这个新属性同样是响应式的，且触发视图更新。</p>
+<p>它必须用于向响应式对象上添加新属性，因为 <strong>Vue</strong> 无法探测普通的新增属性 (比如 this.myObject.newProperty = ‘hi’)</p>
 </blockquote>
-        
+<p> 所以按照官方的写法应该是：<br> <a id="more"></a></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Vue.set(vueInstance.$data.arr, <span class="number">0</span>, <span class="number">3</span>);  <span class="comment">// 这样操作数组可以让页面重新渲染</span></span><br><span class="line">vueInstance.$set(vueInstance.$data.arr, <span class="number">0</span>, <span class="number">3</span>); <span class="comment">// 这样操作数组也可以让页面重新渲染</span></span><br><span class="line">Vue.set(vueInstance.$data.obj1, b, <span class="number">3</span>);  <span class="comment">// 这样操作对象可以让页面重新渲染</span></span><br><span class="line">vueInstance.$set(vueInstance.$data.obj1, b, <span class="number">3</span>); <span class="comment">// 这样操作对象也可以让页面重新渲染</span></span><br></pre></td></tr></table></figure>
+<h4 id="Vue-set-和this-set-实现原理"><a href="#Vue-set-和this-set-实现原理" class="headerlink" title="Vue.set()和this.$set()实现原理"></a>Vue.set()和this.$set()实现原理</h4><p> 是时候看一波这两个api的源码了，我们先来看看Vue.set()的源码： </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; set &#125; <span class="keyword">from</span> <span class="string">'../observer/index'</span></span><br><span class="line"></span><br><span class="line">...</span><br><span class="line">Vue.set = set</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<p> 再来看看this.$set()的源码： </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; set &#125; <span class="keyword">from</span> <span class="string">'../observer/index'</span></span><br><span class="line"></span><br><span class="line">...</span><br><span class="line">Vue.prototype.$set = set</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<p>发现这两个api的实现原理基本一模一样，都是使用了set函数。</p>
+<p>set函数是从 ../observer/index 文件中导出的，区别在于Vue.set()是将set函数绑定在Vue构造函数上，this.$set()是将set函数绑定在Vue原型上。</p>
+<h4 id="数组的实现原理"><a href="#数组的实现原理" class="headerlink" title="数组的实现原理"></a>数组的实现原理</h4><p> 继续源码： </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="built_in">Array</span>.isArray(target) &amp;&amp; isValidArrayIndex(key)) &#123;</span><br><span class="line">    target.length = <span class="built_in">Math</span>.max(target.length, key)</span><br><span class="line">    target.splice(key, <span class="number">1</span>, val)</span><br><span class="line">    <span class="keyword">return</span> val</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<p>首先if判断当前target是不是数组，并且key的值是有效的数组索引。</p>
+<p>然后将target数组的长度设置为target.length和key中的最大值，这里为什么要这样做呢?是因为我们可能会进行下面这种骚操作：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">arr1 = [<span class="number">1</span>,<span class="number">3</span>];</span><br><span class="line">Vue.set(arr1,<span class="number">10</span>,<span class="number">1</span>)  <span class="comment">// 如果不那样做，这种情况就会出问题</span></span><br></pre></td></tr></table></figure>
+<p>接着向下看，我们发现这里直接调用了target.splice(key, 1, val)，在前面我们说过调用arrayMethods提供的<strong>push</strong>、<strong>pop</strong>等7个方法可以导致页面重新渲染，刚好splice也是属性arrayMethods提供的7个方法中的一种。</p>
+<p>总结一下Vue.set数组实现的原理：<br>其实Vue.set()对于数组的处理其实就是调用了splice方法，是不是发现其实很简单~~</p>
+<h4 id="对象的实现原理"><a href="#对象的实现原理" class="headerlink" title="对象的实现原理"></a>对象的实现原理</h4><p> 续看源码： </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (key <span class="keyword">in</span> target &amp;&amp; !(key <span class="keyword">in</span> <span class="built_in">Object</span>.prototype)) &#123;</span><br><span class="line">    target[key] = val</span><br><span class="line">    <span class="keyword">return</span> val</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<p>这里先判断如果key本来就是对象中的一个属性，并且key不是Object原型上的属性。说明这个key本来就在对象上面已经定义过了的，直接修改值就可以了，可以自动触发响应。<br> 注意：对于<strong>新增的对象属性不会重新渲染</strong>，这也刚好解释了我们使用 vueInstance.$data.obj1.b = 3; 的时候为什么页面不会重新渲染，因为这里的属性b不是对象的已有属性，也就是说属性b没有进行过依赖收集，所以才会导致修改属性b的值页面不会重新渲染。</p>
+<p> 继续看源码： </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">defineReactive(ob.value, key, val)</span><br><span class="line">  ob.dep.notify()</span><br><span class="line">  <span class="keyword">return</span> val</span><br></pre></td></tr></table></figure>
+<p>这里其实才是vue.set()真正处理对象的地方。<code>defineReactive(ob.value, key, val)</code>的意思是给新加的属性添加依赖，以后再直接修改这个新的属性的时候就会触发页面渲染。<br> <code>ob.dep.notify()</code>这句代码的意思是触发当前的依赖（这里的依赖依然可以理解成渲染函数），所以页面就会进行重新渲染。</p>
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢您的支持<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/money/alipay-min.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/money/weixin-min.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -414,7 +238,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Personal</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
         		</li>
       		
 		</ul>
@@ -423,16 +247,24 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/09/05/Personal/">展开全文 >></a>
-        </p>
-      
 
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2019/11/20/异步神器Async-await介绍与填坑/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">异步神器Async-await介绍与填坑</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -452,181 +284,14 @@
 
 
 
-
-  
-    <article id="post-JavaScript遍历总结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/09/04/JavaScript遍历总结/">JavaScript遍历总结</a>
-    </h1>
-  
-
-        
-        <a href="/2018/09/04/JavaScript遍历总结/" class="archive-article-date">
-  	<time datetime="2018-09-04T02:25:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-04</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="总结一下JS常用的遍历方法"><a href="#总结一下JS常用的遍历方法" class="headerlink" title="总结一下JS常用的遍历方法"></a>总结一下JS常用的遍历方法</h2><ul>
-<li>本文给大家总结了13种JavaScript 中的1循环遍历方法,每种方法通过实例代码给大家介绍的非常详细，具有一定的参考借鉴价值，需要的朋友可以参考下<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// array  object</span></span><br><span class="line"><span class="keyword">const</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line"><span class="keyword">const</span> obj = &#123;<span class="attr">a</span>:<span class="number">1</span>, <span class="attr">b</span>:<span class="number">2</span>, <span class="attr">c</span>:<span class="number">3</span>&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="1、for-循环"><a href="#1、for-循环" class="headerlink" title="1、for 循环"></a>1、for 循环</h3><ul>
-<li>for 循环是 Js 中最常用的一个循环工具，经常用于数组的循环遍历。
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/09/04/JavaScript遍历总结/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-SCSS-详解" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/31/SCSS-详解/">SCSS --详解</a>
-    </h1>
-  
-
-        
-        <a href="/2018/08/31/SCSS-详解/" class="archive-article-date">
-  	<time datetime="2018-08-31T06:40:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-31</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="https://raw.githubusercontent.com/zhengyuliang/Blog-Back-Up/master/images/SCSS.jpg" style="width: 100%;" title="SCSS 详解"></p>
-<h2 id="1-CSS预处理器"><a href="#1-CSS预处理器" class="headerlink" title="1. CSS预处理器"></a>1. CSS预处理器</h2><ul>
-<li>定义了一种新的专门的编程语言，编译后成正常的CSS文件。为CSS增加一些编程的特性，无需考虑浏览器的兼容问题，让CSS更加简洁，适应性更强，可读性更佳，更易于代码的维护等诸多好处。</li>
-<li>CSS预处理器语言：scss（sass）、LESSCSSS等；</li>
-</ul>
-<h2 id="2-Sass和SCSS的区别"><a href="#2-Sass和SCSS的区别" class="headerlink" title="2.Sass和SCSS的区别"></a>2.Sass和SCSS的区别</h2><ul>
-<li>文件扩展名不同：“.sass”和“.scss”；</li>
-<li>Sass是以严格缩进式语法规则来书写的，不带大括号和分号；而SCSS的语法和CSS书写语法类似。</li>
-</ul>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">SCSS</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">CSS预处理器语言</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/08/31/SCSS-详解/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-    </nav>
+  
+
+  
+
+  
+
   
 
 
@@ -654,8 +319,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
