@@ -6,18 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://zhengyuliang.github.io">
-  <title>Tag: CSS预处理器语言 | zhengyuliang</title>
+  <title>5种常见函数的写法和调用方式 | zhengyuliang</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前端开发工程师">
-<meta property="og:type" content="website">
-<meta property="og:title" content="zhengyuliang">
-<meta property="og:url" content="https://zhengyuliang.github.io/tags/CSS预处理器语言/index.html">
+  <meta name="description" content="函数在开发中随处可见，经常在开发中我们声明函数就使用了一两种就已经足够了，但是，对我这有梦想的码农来说，这显然是不够的，因此，总结整理了5中常见的声明方式和调用方式。  记录函数简单的写法，最基本功了，这个要学一下，不能忘记咯  1、函数声明（最常规写法）1234567// 常规函数写法function test() &amp;#123;    console.log(&apos;这里是常规测试&apos;)&amp;#125;">
+<meta name="keywords" content="javascript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="5种常见函数的写法和调用方式">
+<meta property="og:url" content="https://zhengyuliang.github.io/2019/11/28/5种常见函数的写法和调用方式/index.html">
 <meta property="og:site_name" content="zhengyuliang">
-<meta property="og:description" content="前端开发工程师">
+<meta property="og:description" content="函数在开发中随处可见，经常在开发中我们声明函数就使用了一两种就已经足够了，但是，对我这有梦想的码农来说，这显然是不够的，因此，总结整理了5中常见的声明方式和调用方式。  记录函数简单的写法，最基本功了，这个要学一下，不能忘记咯  1、函数声明（最常规写法）1234567// 常规函数写法function test() &amp;#123;    console.log(&apos;这里是常规测试&apos;)&amp;#125;">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-11-28T02:00:51.229Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="zhengyuliang">
-<meta name="twitter:description" content="前端开发工程师">
+<meta name="twitter:title" content="5种常见函数的写法和调用方式">
+<meta name="twitter:description" content="函数在开发中随处可见，经常在开发中我们声明函数就使用了一两种就已经足够了，但是，对我这有梦想的码农来说，这显然是不够的，因此，总结整理了5中常见的声明方式和调用方式。  记录函数简单的写法，最基本功了，这个要学一下，不能忘记咯  1、函数声明（最常规写法）1234567// 常规函数写法function test() &amp;#123;    console.log(&apos;这里是常规测试&apos;)&amp;#125;">
   
     <link rel="alternative" href="/atom.xml" title="zhengyuliang" type="application/atom+xml">
   
@@ -141,68 +143,145 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-5种常见函数的写法和调用方式" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/31/SCSS-详解/" class="archive-article-date">
-  	<time datetime="2018-08-31T06:40:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-31</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/31/SCSS-详解/">SCSS --详解</a>
+    <h1 class="article-title" itemprop="name">
+      5种常见函数的写法和调用方式
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/11/28/5种常见函数的写法和调用方式/" class="archive-article-date">
+  	<time datetime="2019-11-28T02:00:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-28</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p> 函数在开发中随处可见，经常在开发中我们声明函数就使用了一两种就已经足够了，但是，对我这有梦想的码农来说，这显然是不够的，因此，总结整理了5中常见的声明方式和调用方式。 </p>
+<p>记录函数简单的写法，最基本功了，这个要学一下，不能忘记咯</p>
+</blockquote>
+<h4 id="1、函数声明（最常规写法）"><a href="#1、函数声明（最常规写法）" class="headerlink" title="1、函数声明（最常规写法）"></a>1、函数声明（最常规写法）</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 常规函数写法</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'这里是常规测试'</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 调用函数</span></span><br><span class="line">test();</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h4 id="2、函数表达式（匿名函数写法）"><a href="#2、函数表达式（匿名函数写法）" class="headerlink" title="2、函数表达式（匿名函数写法）"></a>2、函数表达式（匿名函数写法）</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 匿名函数写法</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'这里是匿名函数测试'</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 调用函数</span></span><br><span class="line">test();</span><br></pre></td></tr></table></figure>
+<h4 id="3、将方法作为一个对象"><a href="#3、将方法作为一个对象" class="headerlink" title="3、将方法作为一个对象"></a>3、将方法作为一个对象</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 写法</span></span><br><span class="line"><span class="keyword">var</span> Test = &#123;</span><br><span class="line">	text1: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">'这里是测试1'</span>)</span><br><span class="line">	&#125;,</span><br><span class="line">    text2: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'这里是测试2'</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 调用函数</span></span><br><span class="line">Test.test1();</span><br><span class="line">Test.test2();</span><br></pre></td></tr></table></figure>
+<h4 id="4、构造函数中给对象添加方法-利用原型特性实现"><a href="#4、构造函数中给对象添加方法-利用原型特性实现" class="headerlink" title="4、构造函数中给对象添加方法 (利用原型特性实现)"></a>4、构造函数中给对象添加方法 (利用原型特性实现)</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 构造函数写法</span></span><br><span class="line"><span class="keyword">var</span> Test = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line">Test.prototype.way = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'这里是构造函数测试'</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 调用函数</span></span><br><span class="line"><span class="keyword">var</span> funname = <span class="keyword">new</span> Test(); <span class="comment">//创建对象</span></span><br><span class="line">funname.way(); <span class="comment">//调用对象属性</span></span><br></pre></td></tr></table></figure>
+<h4 id="5、自执行函数"><a href="#5、自执行函数" class="headerlink" title="5、自执行函数"></a>5、自执行函数</h4><ol>
+<li><p>最前最后加括号 </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">'测试内容1'</span>)</span><br><span class="line">&#125;())</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>function</code>外面加括号 </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">'测试内容2'</span>)</span><br><span class="line">&#125;)()</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>function</code>前面加运算符，常见的是<code>!</code>与<code>void</code>。 </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">!<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    alert(<span class="number">1</span>);</span><br><span class="line">&#125;()</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">alert(<span class="number">2</span>);</span><br><span class="line">&#125;()</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢您的支持<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/money/alipay-min.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/money/weixin-min.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">SCSS</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">CSS预处理器语言</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2019/11/27/ES6之Set和Map数据结构深入学习/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">ES6之Set和Map数据结构深入学习</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -230,9 +309,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
