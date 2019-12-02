@@ -6,18 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://zhengyuliang.github.io">
-  <title>Tag: cookie | zhengyuliang</title>
+  <title>vue关键知识点难点 | zhengyuliang</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前端开发工程师">
-<meta property="og:type" content="website">
-<meta property="og:title" content="zhengyuliang">
-<meta property="og:url" content="https://zhengyuliang.github.io/tags/cookie/index.html">
+  <meta name="description" content="这里是记录vue难点知识，请牢记，牢记….  Vue 的父组件和子组件生命周期钩子函数执行顺序？Vue 的父组件和子组件生命周期钩子函数执行顺序可以归类为以下 4 部分：  加载渲染过程 父 beforeCreate -&amp;gt; 父 created -&amp;gt; 父 beforeMount -&amp;gt; 子 beforeCreate -&amp;gt; 子 created -&amp;gt; 子 beforeMou">
+<meta name="keywords" content="vue">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue关键知识点难点">
+<meta property="og:url" content="https://zhengyuliang.github.io/2019/12/02/vue关键知识点难点/index.html">
 <meta property="og:site_name" content="zhengyuliang">
-<meta property="og:description" content="前端开发工程师">
+<meta property="og:description" content="这里是记录vue难点知识，请牢记，牢记….  Vue 的父组件和子组件生命周期钩子函数执行顺序？Vue 的父组件和子组件生命周期钩子函数执行顺序可以归类为以下 4 部分：  加载渲染过程 父 beforeCreate -&amp;gt; 父 created -&amp;gt; 父 beforeMount -&amp;gt; 子 beforeCreate -&amp;gt; 子 created -&amp;gt; 子 beforeMou">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-12-02T09:55:13.742Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="zhengyuliang">
-<meta name="twitter:description" content="前端开发工程师">
+<meta name="twitter:title" content="vue关键知识点难点">
+<meta name="twitter:description" content="这里是记录vue难点知识，请牢记，牢记….  Vue 的父组件和子组件生命周期钩子函数执行顺序？Vue 的父组件和子组件生命周期钩子函数执行顺序可以归类为以下 4 部分：  加载渲染过程 父 beforeCreate -&amp;gt; 父 created -&amp;gt; 父 beforeMount -&amp;gt; 子 beforeCreate -&amp;gt; 子 created -&amp;gt; 子 beforeMou">
   
     <link rel="alternative" href="/atom.xml" title="zhengyuliang" type="application/atom+xml">
   
@@ -141,64 +143,143 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-vue关键知识点难点" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/07/cookie、sessionStorage 和 localStorage 的区别/" class="archive-article-date">
-  	<time datetime="2019-11-07T01:46:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-07</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/07/cookie、sessionStorage 和 localStorage 的区别/">cookie、sessionStorage 和 localStorage 的区别</a>
+    <h1 class="article-title" itemprop="name">
+      vue关键知识点难点
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/12/02/vue关键知识点难点/" class="archive-article-date">
+  	<time datetime="2019-12-02T09:53:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>这里是记录vue难点知识，请牢记，牢记….</p>
+</blockquote>
+<h4 id="Vue-的父组件和子组件生命周期钩子函数执行顺序？"><a href="#Vue-的父组件和子组件生命周期钩子函数执行顺序？" class="headerlink" title="Vue 的父组件和子组件生命周期钩子函数执行顺序？"></a>Vue 的父组件和子组件生命周期钩子函数执行顺序？</h4><p>Vue 的父组件和子组件生命周期钩子函数执行顺序可以归类为以下 4 部分：</p>
+<ul>
+<li><p>加载渲染过程</p>
+<p>父 beforeCreate -&gt; 父 created -&gt; 父 beforeMount -&gt; 子 beforeCreate -&gt; 子 created -&gt; 子 beforeMount -&gt; 子 mounted -&gt; 父 mounted</p>
+</li>
+<li><p>子组件更新过程</p>
+<p>父 beforeUpdate -&gt; 子 beforeUpdate -&gt; 子 updated -&gt; 父 updated</p>
+</li>
+<li><p>父组件更新过程</p>
+<p>父 beforeUpdate -&gt; 父 updated</p>
+</li>
+<li><p>销毁过程</p>
+<p>父 beforeDestroy -&gt; 子 beforeDestroy -&gt; 子 destroyed -&gt; 父 destroyed</p>
+</li>
+</ul>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢您的支持<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/money/alipay-min.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/money/weixin-min.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">cookie</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2019/11/28/5种常见函数的写法和调用方式/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">5种常见函数的写法和调用方式</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -226,9 +307,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
