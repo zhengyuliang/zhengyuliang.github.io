@@ -180,37 +180,6 @@
 <p>以上的说明只是举例，大家可以根据项目需求自定义开头的字符，这样做的目的是使CSS代码整洁易维护。</p>
 <h4 id="2-选择器皆为小写形式"><a href="#2-选择器皆为小写形式" class="headerlink" title="2.选择器皆为小写形式"></a>2.选择器皆为小写形式</h4><p>推荐的写法：</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.g-first-header</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">16px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>不推荐的写法：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.g-FirstHeader</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">16px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="3-每个选择器独占一列"><a href="#3-每个选择器独占一列" class="headerlink" title="3.每个选择器独占一列"></a>3.每个选择器独占一列</h4><p>除最后一个选择器外，其它每一列选择器均以逗号结尾。若用到兄弟元素选择器，则相关符号的左右两端均留出一个半角空格。</p>
-<p>推荐的写法：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// web前端开发学习Q-q-u-n： 731771211，分享学习的方法和需要注意的小细节，不停更新最新的教程和学习方法（详细的前端项目实战教学视频，PDF）</span><br><span class="line"><span class="selector-class">.g-first-header</span>,</span><br><span class="line"><span class="selector-class">.g-second-header-1</span> &gt; <span class="selector-class">.g-second-header-2</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">2px</span> solid <span class="number">#C3C3C3</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>不推荐的写法：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.g-first-header</span>, <span class="selector-class">.g-second-header-1</span>&gt;<span class="selector-class">.g-second-header-2</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">2px</span> solid <span class="number">#C3C3C3</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="4-避开HTML标记"><a href="#4-避开HTML标记" class="headerlink" title="4.避开HTML标记"></a>4.避开HTML标记</h4><p>构建选择器时应尽量采用语义明确的类别名称，避开HTML标记，因为一旦HTML的结构产生更动，则与此对应的样式也就无效了。尽量将样式与结构分离，这样会使得阶层式样式表在日后更易被维护。</p>
-<p>推荐的写法：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.g-content</span> <span class="selector-class">.g-item</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="attribute">flex-basis</span>: <span class="number">20%</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>不推荐的写法：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.g-content</span> <span class="selector-tag">li</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="attribute">flex-basis</span>: <span class="number">20%</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="5-少用ID"><a href="#5-少用ID" class="headerlink" title="5.少用ID"></a>5.少用ID</h4><p>ID的唯一性注定了它所对应的元素的样式就是一次性的，无法重用，一旦HTML结构发生变化，套用ID的选择器就要随之修改。另一个重要的原因是：ID的权重值是最高的，这可能会导致日后添加的样式无法复写原先的样式。</p>
-<p>推荐的写法：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.g-special-content</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>不推荐的写法：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#special-content</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>属性的书写规范</p>
-</blockquote>
-<h4 id="1-按顺序排列属性"><a href="#1-按顺序排列属性" class="headerlink" title="1.按顺序排列属性"></a>1.按顺序排列属性</h4><p>每条规则下的属性在书写时，应按类别进行分组，其排列顺序如下：</p>
-<ol>
-<li>位置：bottom、float、display、left、position、right、top和z-index等；</li>
-<li>大小：height、margin、padding和width等；</li>
-<li>版式：color、font、letter-spacing、line-height和text-align等；</li>
-<li>背景：background等；</li>
-<li>其它：animation和transition等。</li>
-</ol>
-<h4 id="2-缩写属性"><a href="#2-缩写属性" class="headerlink" title="2.缩写属性"></a>2.缩写属性</h4><p>有些属性是可以合在一块的，既精简代码，又便于阅读。</p>
-<p>推荐的写法：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.test-selector-1</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">3px</span> <span class="number">5px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
         
       
 
@@ -1128,11 +1097,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">cookie</a>
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">vue</a>
+                <a href="javascript:void(0)" class="js-tag color2">cookie</a>
               </li>
             
               <li class="article-tag-list-item">

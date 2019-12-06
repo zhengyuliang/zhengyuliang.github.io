@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="zhengyuliang">
 <meta property="og:description" content="18种CSS命名和书写规范 选择器的命名规范  1.模块化命名例如：  与布局相关的样式以“g”为开头。如“g-content”和“g-header”； 与挂钩相关的样式以“j”为开头。如“j-open”和“j-request”； 与元件相关的样式以“m”为开头。如“m-dropMenu”和“m-slider”； 与状态相关的样式以“s”为开头。如“s-current”和“s-selected”；">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-12-06T03:38:33.226Z">
+<meta property="og:updated_time" content="2019-12-06T03:41:53.802Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="18种CSS命名和书写规范">
 <meta name="twitter:description" content="18种CSS命名和书写规范 选择器的命名规范  1.模块化命名例如：  与布局相关的样式以“g”为开头。如“g-content”和“g-header”； 与挂钩相关的样式以“j”为开头。如“j-open”和“j-request”； 与元件相关的样式以“m”为开头。如“m-dropMenu”和“m-slider”； 与状态相关的样式以“s”为开头。如“s-current”和“s-selected”；">
@@ -180,6 +180,7 @@
 <p>以上的说明只是举例，大家可以根据项目需求自定义开头的字符，这样做的目的是使CSS代码整洁易维护。</p>
 <h4 id="2-选择器皆为小写形式"><a href="#2-选择器皆为小写形式" class="headerlink" title="2.选择器皆为小写形式"></a>2.选择器皆为小写形式</h4><p>推荐的写法：</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.g-first-header</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">16px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <p>不推荐的写法：</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.g-FirstHeader</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">16px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="3-每个选择器独占一列"><a href="#3-每个选择器独占一列" class="headerlink" title="3.每个选择器独占一列"></a>3.每个选择器独占一列</h4><p>除最后一个选择器外，其它每一列选择器均以逗号结尾。若用到兄弟元素选择器，则相关符号的左右两端均留出一个半角空格。</p>
@@ -211,7 +212,6 @@
 <h4 id="2-缩写属性"><a href="#2-缩写属性" class="headerlink" title="2.缩写属性"></a>2.缩写属性</h4><p>有些属性是可以合在一块的，既精简代码，又便于阅读。</p>
 <p>推荐的写法：</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.test-selector-1</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">3px</span> <span class="number">5px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
 <p>不推荐的写法：</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.test-selector-1</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="attribute">padding-top</span>: <span class="number">3px</span>;</span><br><span class="line">    <span class="attribute">padding-right</span>: <span class="number">5px</span>;</span><br><span class="line">    <span class="attribute">padding-bottom</span>: <span class="number">3px</span>;</span><br><span class="line">    <span class="attribute">padding-left</span>: <span class="number">5px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="3-去除小数开头的0"><a href="#3-去除小数开头的0" class="headerlink" title="3.去除小数开头的0"></a>3.去除小数开头的0</h4><p>推荐的写法：</p>
@@ -492,11 +492,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">cookie</a>
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">vue</a>
+                <a href="javascript:void(0)" class="js-tag color2">cookie</a>
               </li>
             
               <li class="article-tag-list-item">
