@@ -6,18 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://zhengyuliang.github.io">
-  <title>zhengyuliang</title>
+  <title>Vue this..push、replace、go的区别 | zhengyuliang</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前端开发工程师">
-<meta property="og:type" content="website">
-<meta property="og:title" content="zhengyuliang">
-<meta property="og:url" content="https://zhengyuliang.github.io/page/2/index.html">
+  <meta name="description" content="1、this.$router.push描述：跳转到不同的url，但这个方法会向history添加一个记录，点击后会返回到上一个页面 用法12345678//字符串this.$router.push(&apos;home&apos;)//对象this.$router.push(&amp;#123;path:&apos;home&apos;&amp;#125;)//命名的路由this.$router.push(&amp;#123;name:&apos;user&apos;,param">
+<meta name="keywords" content="vue">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vue this..push、replace、go的区别">
+<meta property="og:url" content="https://zhengyuliang.github.io/2019/12/20/Vue-this-push、replace、go的区别/index.html">
 <meta property="og:site_name" content="zhengyuliang">
-<meta property="og:description" content="前端开发工程师">
+<meta property="og:description" content="1、this.$router.push描述：跳转到不同的url，但这个方法会向history添加一个记录，点击后会返回到上一个页面 用法12345678//字符串this.$router.push(&apos;home&apos;)//对象this.$router.push(&amp;#123;path:&apos;home&apos;&amp;#125;)//命名的路由this.$router.push(&amp;#123;name:&apos;user&apos;,param">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-12-20T07:53:15.986Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="zhengyuliang">
-<meta name="twitter:description" content="前端开发工程师">
+<meta name="twitter:title" content="Vue this..push、replace、go的区别">
+<meta name="twitter:description" content="1、this.$router.push描述：跳转到不同的url，但这个方法会向history添加一个记录，点击后会返回到上一个页面 用法12345678//字符串this.$router.push(&apos;home&apos;)//对象this.$router.push(&amp;#123;path:&apos;home&apos;&amp;#125;)//命名的路由this.$router.push(&amp;#123;name:&apos;user&apos;,param">
   
     <link rel="alternative" href="/atom.xml" title="zhengyuliang" type="application/atom+xml">
   
@@ -141,44 +143,66 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-vue-高级技巧" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-Vue-this-push、replace、go的区别" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/19/vue-高级技巧/">vue 高级技巧</a>
+    <h1 class="article-title" itemprop="name">
+      Vue this..push、replace、go的区别
     </h1>
   
 
         
-        <a href="/2019/11/19/vue-高级技巧/" class="archive-article-date">
-  	<time datetime="2019-11-19T07:56:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-19</time>
+        <a href="/2019/12/20/Vue-this-push、replace、go的区别/" class="archive-article-date">
+  	<time datetime="2019-12-20T07:52:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-20</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="1-css-局部样式"><a href="#1-css-局部样式" class="headerlink" title="1.css 局部样式"></a><strong>1.css 局部样式</strong></h3><ul>
-<li>vue 中style样式添加scoped属性表示它的样式只作用于当前组件，样式私有化。</li>
-<li>但是当前组件的根组件会受到父组件样式的影响。（比如父组件有个.box{background:red}, 如果子组件即当前组件的根组件类名也为box，那背景也会为red）</li>
-<li><p>其中渲染的原理： </p>
-<ul>
-<li>给HTML的DOM节点添加一个不重复的data属性 来表示唯一性 </li>
-<li>在对应的css选择器末尾添加一个当前组件的data属性选择器来私有化 </li>
-</ul>
-</li>
-<li><p>如果使用了scoped属性后，想让组件内部样式被外部控制，只需要css添加 <code>deep</code>属性即可 </p>
-</li>
-</ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;style lang="less" scoped&gt;</span><br><span class="line"><span class="selector-class">.text-box</span> &#123;</span><br><span class="line">  /deep/ input &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">166px</span>;</span><br><span class="line">    <span class="attribute">text-align</span>: center;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
-        
+        <h4 id="1、this-router-push"><a href="#1、this-router-push" class="headerlink" title="1、this.$router.push"></a>1、this.$router.push</h4><p><strong>描述：跳转到不同的url，但这个方法会向history添加一个记录，点击后会返回到上一个页面</strong></p>
+<h5 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//字符串</span></span><br><span class="line"><span class="keyword">this</span>.$router.push(<span class="string">'home'</span>)</span><br><span class="line"><span class="comment">//对象</span></span><br><span class="line"><span class="keyword">this</span>.$router.push(&#123;<span class="attr">path</span>:<span class="string">'home'</span>&#125;)</span><br><span class="line"><span class="comment">//命名的路由</span></span><br><span class="line"><span class="keyword">this</span>.$router.push(&#123;<span class="attr">name</span>:<span class="string">'user'</span>,<span class="attr">params</span>:&#123;<span class="attr">userId</span>:<span class="number">123</span>&#125;&#125;)</span><br><span class="line"><span class="comment">//带查询参数，变成/register?plan=private</span></span><br><span class="line"><span class="keyword">this</span>.$router.push(&#123;<span class="attr">path</span>:<span class="string">'register'</span>,<span class="attr">query</span>:&#123;<span class="attr">plan</span>:<span class="string">'private'</span>&#125;&#125;)</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h4 id="2、this-router-replace"><a href="#2、this-router-replace" class="headerlink" title="2、this.$router.replace"></a>2、this.$router.replace</h4><p><strong>描述：同样是跳转到指定的url，但是这个方法不会向history里面添加新的记录，点击返回，会跳转到上上一个页面。上一个记录是不存在的</strong></p>
+<h4 id="3、this-router-go"><a href="#3、this-router-go" class="headerlink" title="3、this.$router.go"></a>3、this.$router.go</h4><p><strong>描述：相当于当前页面向前或向后跳转多少个页面，蕾丝window.hisstory.go(n)。n可为正数或者也可以为负数</strong></p>
+<h5 id="用法-1"><a href="#用法-1" class="headerlink" title="用法"></a>用法</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//在浏览器记录中前进一步，等同于history.forward()</span></span><br><span class="line"><span class="keyword">this</span>.$router.go(<span class="number">1</span>)</span><br><span class="line"><span class="comment">//后退一步记录</span></span><br><span class="line"><span class="keyword">this</span>.$router.go(<span class="number">-1</span>)</span><br><span class="line"><span class="comment">//前进三步记录</span></span><br><span class="line"><span class="keyword">this</span>.$router.go(<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢您的支持<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/money/alipay-min.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/money/weixin-min.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -188,10 +212,6 @@
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
-        		</li>
-      		 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
         		</li>
@@ -202,16 +222,24 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/19/vue-高级技巧/">展开全文 >></a>
-        </p>
-      
 
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2019/12/17/父组件监听到子组件的生命周期/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">父组件监听到子组件的生命周期</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -231,724 +259,14 @@
 
 
 
-
-  
-    <article id="post-7道javascript-让你深入理解自己的不足" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/18/7道javascript-让你深入理解自己的不足/">7道javascript,让你深入理解自己的不足</a>
-    </h1>
-  
-
-        
-        <a href="/2019/11/18/7道javascript-让你深入理解自己的不足/" class="archive-article-date">
-  	<time datetime="2019-11-18T07:19:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-18</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="7道javascript题，让你理解基本的javascript"><a href="#7道javascript题，让你理解基本的javascript" class="headerlink" title="7道javascript题，让你理解基本的javascript"></a>7道javascript题，让你理解基本的javascript</h3><blockquote>
-<p> 如果你符合JavaScript高级开发人员的资格，在编码面试中很有可能会被问到一些刁钻的问题。 </p>
-</blockquote>
-<h4 id="1-意外的全局变量"><a href="#1-意外的全局变量" class="headerlink" title="1. 意外的全局变量"></a>1. 意外的全局变量</h4><h5 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h5><p> 在以下代码中，<code>typeof a</code>和<code>typeof b</code>的值分别是什么： </p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> a = b = <span class="number">0</span>;</span><br><span class="line">  a++;</span><br><span class="line">  <span class="keyword">return</span> a;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">foo();</span><br><span class="line"><span class="keyword">typeof</span> a; <span class="comment">// =&gt; ???typeof b; // =&gt; ???</span></span><br></pre></td></tr></table></figure>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/18/7道javascript-让你深入理解自己的不足/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-JavaScript之防抖（Debounce）和节流（Throttle）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/18/JavaScript之防抖（Debounce）和节流（Throttle）/">JavaScript之防抖（Debounce）和节流（Throttle）</a>
-    </h1>
-  
-
-        
-        <a href="/2019/11/18/JavaScript之防抖（Debounce）和节流（Throttle）/" class="archive-article-date">
-  	<time datetime="2019-11-18T02:16:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-18</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="一、背景"><a href="#一、背景" class="headerlink" title="一、背景"></a>一、背景</h3><p>防抖和节流是两种不同的控制一个函数执行次数的方法，其目的都是为了节约计算机资源。<br> 当我们操作DOM的时候，加上节流或者防抖就非常有必要，因为众所周知，操作DOM的开销是非常大的，所以要尽可能减少DOM操作次数。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// html</span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>Number of scroll events <span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span> <span class="attr">class</span>=<span class="string">"reset"</span>&gt;</span>Reset<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"counter"</span>&gt;</span>0<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javaScript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/18/JavaScript之防抖（Debounce）和节流（Throttle）/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-理解Vue-mixin" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/15/理解Vue-mixin/">理解Vue.mixin</a>
-    </h1>
-  
-
-        
-        <a href="/2019/11/15/理解Vue-mixin/" class="archive-article-date">
-  	<time datetime="2019-11-15T08:11:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="理解Vue-mixin，利用Vue-mixin正确的偷懒"><a href="#理解Vue-mixin，利用Vue-mixin正确的偷懒" class="headerlink" title="理解Vue.mixin，利用Vue.mixin正确的偷懒"></a>理解Vue.mixin，利用Vue.mixin正确的偷懒</h2><blockquote>
-<p>刚进入vue项目，有部分细节功能不清楚。段期做了一个vue项目，看到使用vue.mixin功能，就想去了解透怎么应用及使用原理，故有了下文</p>
-</blockquote>
-<p> <strong>关于Vue.mixin ，官方解释如下</strong></p>
-<p> 混入 (mixin) 提供了一种非常灵活的方式，来分发 Vue 组件中的可复用功能。一个混入对象可以包含任意组件选项。当组件使用混入对象时，所有混入对象的选项将被“混合”进入该组件本身的选项。 <em>（不理解，所以看只有看例子咯）</em></p>
-<p> Vue.mixin为我们提供了两种混入方式：<strong>局部混入</strong>和<strong>全局混入</strong>； <em>（好像有关vue都基本上都有局部与合局加载一说，~）</em></p>
-<h3 id="局部混入"><a href="#局部混入" class="headerlink" title="局部混入"></a>局部混入</h3><p> 顾名思义就是部分混入，也就是只有引入了mixin的混入对象才可以使用，并且只有在引入了mixin混入对象的组件中才生效； </p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/15/理解Vue-mixin/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-axios知识点" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/14/axios知识点/">axios知识点</a>
-    </h1>
-  
-
-        
-        <a href="/2019/11/14/axios知识点/" class="archive-article-date">
-  	<time datetime="2019-11-14T07:13:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="axios知识点及vue的使用axios方式"><a href="#axios知识点及vue的使用axios方式" class="headerlink" title="axios知识点及vue的使用axios方式"></a>axios知识点及vue的使用axios方式</h1><h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p> Axios 是一个基于 <strong>Promise</strong> 的 HTTP 库，可以用在浏览器和 node.js 中 ，它提供了一个更强大、更灵活的功能集。 </p>
-<h3 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h3><ul>
-<li>在浏览器中创建 XMLHttpRequests </li>
-<li>在 node.js 则创建 http 请求</li>
-<li>支持 <strong>Promise</strong> API</li>
-<li>支持拦截请求和响应</li>
-<li>转换请求和响应数据</li>
-<li>取消请求</li>
-<li>自动转换 JSON 数据</li>
-<li>客户端支持防御 XSRF</li>
-</ul>
-<h3 id="浏览器支持"><a href="#浏览器支持" class="headerlink" title="浏览器支持"></a>浏览器支持</h3><p> 支持Chrome、火狐、Edge、IE8+等浏览器 </p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/14/axios知识点/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Gitbook踩坑记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/12/Gitbook踩坑记/">Gitbook踩坑记</a>
-    </h1>
-  
-
-        
-        <a href="/2019/11/12/Gitbook踩坑记/" class="archive-article-date">
-  	<time datetime="2019-11-12T09:42:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-12</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="Gitbook使用时出现Error-loading-version-latest"><a href="#Gitbook使用时出现Error-loading-version-latest" class="headerlink" title="Gitbook使用时出现Error loading version latest"></a>Gitbook使用时出现Error loading version latest</h3><blockquote>
-<p>我使用的操作系统版本是Ubuntu 16.04。<br>但是装完gitbook之后会出现下面的错误：</p>
-</blockquote>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">flow@flow-P7xxTM:~/os/testGitBook$ gitbook init</span><br><span class="line">Error loading version latest: /home/flow/.gitbook/versions/3.2.3/node_modules/immutable/dist/immutable.js:4409</span><br><span class="line">&#125;);</span><br><span class="line">^</span><br><span class="line"></span><br><span class="line">SyntaxError: Unexpected token &#125;</span><br><span class="line">    at new Script (vm.js:83:7)</span><br><span class="line">    at createScript (vm.js:267:10)</span><br><span class="line">    at Object.runInThisContext (vm.js:319:10)</span><br><span class="line">    at Module._compile (internal/modules/cjs/loader.js:685:28)</span><br><span class="line">    at Object.Module._extensions..js (internal/modules/cjs/loader.js:733:10)</span><br><span class="line">    at Module.load (internal/modules/cjs/loader.js:620:32)</span><br><span class="line">    at tryModuleLoad (internal/modules/cjs/loader.js:560:12)</span><br><span class="line">    at Function.Module._load (internal/modules/cjs/loader.js:552:3)</span><br><span class="line">    at Module.require (internal/modules/cjs/loader.js:658:17)</span><br><span class="line">    at require (internal/modules/cjs/helpers.js:22:18)</span><br><span class="line"></span><br><span class="line">TypeError: Cannot read property 'commands' of null</span><br></pre></td></tr></table></figure>
-<p>百度了好长时间，一直都没有找到有效的解决方法。</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">bug</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">gitbook</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/12/Gitbook踩坑记/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-cookie、sessionStorage 和 localStorage 的区别" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/07/cookie、sessionStorage 和 localStorage 的区别/">cookie、sessionStorage 和 localStorage 的区别</a>
-    </h1>
-  
-
-        
-        <a href="/2019/11/07/cookie、sessionStorage 和 localStorage 的区别/" class="archive-article-date">
-  	<time datetime="2019-11-07T01:46:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="背景介绍"><a href="#背景介绍" class="headerlink" title="背景介绍"></a>背景介绍</h3><p>SessionStorage, LocalStorage, Cookie这三者都可以被用来在浏览器端存储数据，而且都是字符串类型的键值对。 区别在于前两者属于<strong>WebStorage</strong>，<em>创建它们的目的便于客户端存储数据</em>。 而Cookie早在网景公司的浏览器中就开始支持，最初目的是为了保持HTTP的状态。</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">cookie</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/07/cookie、sessionStorage 和 localStorage 的区别/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-javaScript-排序算法总结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/09/11/javaScript-排序算法总结/">javaScript-排序算法总结</a>
-    </h1>
-  
-
-        
-        <a href="/2018/09/11/javaScript-排序算法总结/" class="archive-article-date">
-  	<time datetime="2018-09-11T08:44:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-11</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
-<p>排序算法可能是你学编程第一个学习的算法，还记得冒泡吗？</p>
-</blockquote>
-<p>当然，排序和查找两类算法是面试的热门选项。如果你是一个会写快排的程序猿，面试官在比较你和一个连快排都不会写的人的时候，会优先选择你的。那么，前端需要会排序吗？答案是毋庸置疑的，必须会。现在的前端对计算机基础要求越来越高了，如果连排序这些算法都不会，那么发展前景就有限了。本篇将会总结一下，在前端的一些排序算法。</p>
-<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>首先，我们可以先来看一下js自身的排序算法<code>sort()</code>。</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javaScript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/09/11/javaScript-排序算法总结/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Grid布局指南" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/09/05/Grid布局指南/">Grid布局指南</a>
-    </h1>
-  
-
-        
-        <a href="/2018/09/05/Grid布局指南/" class="archive-article-date">
-  	<time datetime="2018-09-05T05:48:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-05</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <html><br>    <div><br>        <img src="https://raw.githubusercontent.com/zhengyuliang/Blog-Back-Up/master/images/grid.jpg" style="width: 100%;" title="SCSS 详解"><br>    </div><br></html>
-
-<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>CSS网格布局（又称“网格”），是一种二维网格布局系统。CSS在处理网页布局方面一直做的不是很好。<br>一开始我们用的是<strong>table</strong>（表格）布局，然后用<strong>float</strong>(浮动)，<strong>position</strong>（定位）和<strong>inline-block</strong>（行内块）布局，但是这些方法本质上是hack，遗漏了很多功能，例如垂直居中。<br>后来出了<strong>flexbox</strong>(盒子布局)，解决了很多布局问题，但是它仅仅是一维布局，而不是复杂的二维布局，实际上它们（flexbox与grid）能很好的配合使用。<br>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/09/05/Grid布局指南/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="css3-实现三栏布局（左右定宽，中间自适应）几种方法" class="article article-type-css3  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/09/05/实现三栏布局（左右定宽，中间自适应）几种方法/">实现三栏布局（左右定宽，中间自适应）几种方法</a>
-    </h1>
-  
-
-        
-        <a href="/2018/09/05/实现三栏布局（左右定宽，中间自适应）几种方法/" class="archive-article-date">
-  	<time datetime="2018-09-05T02:44:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-05</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>实现三栏布局，左右定宽中间自适应。（四种方式）</p>
-<h3 id="1、flex-目前常用方法，可以自适调节页面宽高等；"><a href="#1、flex-目前常用方法，可以自适调节页面宽高等；" class="headerlink" title="1、flex: 目前常用方法，可以自适调节页面宽高等；"></a>1、flex: 目前常用方法，可以自适调节页面宽高等；</h3><ul>
-<li>display: flex。flex:参数判断子对象多少宽度
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/09/05/实现三栏布局（左右定宽，中间自适应）几种方法/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
-    </nav>
+  
+
+  
+
+  
+
   
 
 
@@ -976,8 +294,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
