@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="https://zhengyuliang.github.io">
   <title>npm常用命令大全 | zhengyuliang</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1.查看版本1npm -v 2.安装模块 全局安装 1npm install &amp;lt;模块名&amp;gt; -g  本地安装 1npm install &amp;lt;模块名&amp;gt;  在项目中安装保存到package.json中 1npm install &amp;lt;模块名&amp;gt; --save-dev">
+  <meta name="description" content="1.查看版本1npm -v 2.安装模块全局安装 1npm install &amp;lt;模块名&amp;gt; -g">
 <meta name="keywords" content="npm">
 <meta property="og:type" content="article">
 <meta property="og:title" content="npm常用命令大全">
 <meta property="og:url" content="https://zhengyuliang.github.io/2019/12/26/npm常用命令大全/index.html">
 <meta property="og:site_name" content="zhengyuliang">
-<meta property="og:description" content="1.查看版本1npm -v 2.安装模块 全局安装 1npm install &amp;lt;模块名&amp;gt; -g  本地安装 1npm install &amp;lt;模块名&amp;gt;  在项目中安装保存到package.json中 1npm install &amp;lt;模块名&amp;gt; --save-dev">
+<meta property="og:description" content="1.查看版本1npm -v 2.安装模块全局安装 1npm install &amp;lt;模块名&amp;gt; -g">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-12-26T06:43:01.394Z">
+<meta property="og:updated_time" content="2019-12-26T06:47:15.796Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="npm常用命令大全">
-<meta name="twitter:description" content="1.查看版本1npm -v 2.安装模块 全局安装 1npm install &amp;lt;模块名&amp;gt; -g  本地安装 1npm install &amp;lt;模块名&amp;gt;  在项目中安装保存到package.json中 1npm install &amp;lt;模块名&amp;gt; --save-dev">
+<meta name="twitter:description" content="1.查看版本1npm -v 2.安装模块全局安装 1npm install &amp;lt;模块名&amp;gt; -g">
   
     <link rel="alternative" href="/atom.xml" title="zhengyuliang" type="application/atom+xml">
   
@@ -164,18 +164,13 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h5 id="1-查看版本"><a href="#1-查看版本" class="headerlink" title="1.查看版本"></a>1.查看版本</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm -v</span><br></pre></td></tr></table></figure>
-<h5 id="2-安装模块"><a href="#2-安装模块" class="headerlink" title="2.安装模块"></a>2.安装模块</h5><ol>
-<li><p>全局安装</p>
+<h5 id="2-安装模块"><a href="#2-安装模块" class="headerlink" title="2.安装模块"></a>2.安装模块</h5><p><strong>全局安装</strong></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install &lt;模块名&gt; -g</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>本地安装</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install &lt;模块名&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>在项目中安装保存到package.json中</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install &lt;模块名&gt; --save-dev</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
 <a id="more"></a>
+<p><strong>本地安装</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install &lt;模块名&gt;</span><br></pre></td></tr></table></figure>
+<p><strong>在项目中安装保存到package.json中</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install &lt;模块名&gt; --save-dev</span><br></pre></td></tr></table></figure>
 <h5 id="3-查看安装信息"><a href="#3-查看安装信息" class="headerlink" title="3.查看安装信息"></a>3.查看安装信息</h5><ol>
 <li><p>查看所有安装模块</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm list -g</span><br></pre></td></tr></table></figure>
@@ -194,7 +189,6 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
 <p>这样就可以使用 cnpm 命令来安装模块了</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install &lt;模块名&gt;</span><br></pre></td></tr></table></figure>
-
       
 
       
